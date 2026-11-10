@@ -1,0 +1,53 @@
+name: Cut out the people in the photos
+
+# Runs when the photo list or the script changes on the main branch,
+# then commits the transparent cut-outs back to the branch.
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'tools/cutouts/photos.txt'
+      - 'tools/cutouts/make.py'
+      - '.github/workflows/cutouts.yml'
+
+permissions:
+  contents: write
+
+concurrency:
+  group: cutouts
+  cancel-in-progress: false
+
+jobs:
+  cutouts:
+    runs-on: ubuntu-latest
+    timeout-minutes: 90
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Install background removal
+        run: pip install "rembg[cpu]" pillow
+
+      - name: Cache the model
+        uses: actions/cache@v4
+        with:
+          path: ~/.u2net
+          key: rembg-models-v1
+
+      - name: Cut out the people
+        run: python tools/cutouts/make.py birefnet-general
+
+      - name: Save the cut-outs to the branch
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898283+github-actions[bot]@users.noreply.github.com"
+          git add assets/img/cut tools/cutouts/out tools/cutouts/manifest.json
+          git diff --cached --quiet && exit 0
+          git commit -m "Add background-free cut-outs of the shop photos"
+          git pull --rebase origin main
+          git push origin HEAD:main
