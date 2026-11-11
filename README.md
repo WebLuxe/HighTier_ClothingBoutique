@@ -2,6 +2,9 @@
 
 The top tier of the WebLuxe clothing-shop demos. It's a static site with no build step and works on GitHub Pages as it is.
 
+## Second Signature design
+`royal/` holds Signature Royal, the maroon and gold one-page boutique (mandala opening curtain, silk-pleat transitions, gold dust, owner panel at `royal/admin/`). Live: https://webluxe.github.io/HighTier_ClothingBoutique/royal/
+
 ## Pages
 | Page | What it is |
 |---|---|

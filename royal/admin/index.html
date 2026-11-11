@@ -1,0 +1,619 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin | WebLuxe High Fashion Boutique</title>
+    <meta name="robots" content="noindex, nofollow">
+    <meta name="theme-color" content="#2D040D">
+    <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='12' fill='%234A0817'/%3E%3Cg fill='none' stroke='%23D4AF37' stroke-width='2.2' stroke-linejoin='round'%3E%3Cpath d='M32 14c6 7 6 17 0 26-6-9-6-19 0-26z'/%3E%3Cpath d='M32 40c-8-2-13-9-13-16 7 2 12 8 13 16z'/%3E%3Cpath d='M32 40c8-2 13-9 13-16-7 2-12 8-13 16z'/%3E%3Cpath d='M18 46q14 6 28 0'/%3E%3C/g%3E%3C/svg%3E">
+    <link rel="stylesheet" href="../tw.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600&family=Montserrat:wght@400;500;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        body { background-color: #FAF6EE; background-image: radial-gradient(circle, rgba(154, 118, 40, .2) 0 1.1px, transparent 1.7px); background-size: 26px 26px; }
+        .dot-field { position: absolute; inset: 0; pointer-events: none; background-image: radial-gradient(circle, rgba(230, 202, 101, .45) 0 1.2px, transparent 1.8px); background-size: 26px 26px; }
+        .text-gold-gradient { background: linear-gradient(135deg, #FAF6EE 0%, #D4AF37 50%, #C5A059 100%); -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent; }
+        :focus-visible { outline: 2px solid #7A5C18; outline-offset: 2px; }
+        .dark :focus-visible { outline-color: #D4AF37; }
+        .field { width: 100%; background: #fff; border: 1px solid rgba(74, 8, 23, .2); border-radius: 2px; padding: .65rem .75rem; color: #2D040D; font-weight: 500; }
+        .field:focus { outline: none; border-color: #7A5C18; box-shadow: 0 0 0 3px rgba(212, 175, 55, .25); }
+        .label { display: block; font-size: 10px; font-weight: 700; letter-spacing: .2em; text-transform: uppercase; color: #5C4636; margin-bottom: .35rem; }
+        .btn { display: inline-flex; align-items: center; justify-content: center; gap: .5rem; padding: .7rem 1.1rem; border-radius: 2px; font-size: 11px; font-weight: 700; letter-spacing: .15em; text-transform: uppercase; transition: all .2s; white-space: nowrap; }
+        .btn:disabled { opacity: .45; cursor: not-allowed; }
+        .btn-gold { background: #D4AF37; color: #2D040D; }
+        .btn-gold:not(:disabled):hover { background: #E6CA65; }
+        .btn-maroon { background: #4A0817; color: #E6CA65; border: 1px solid rgba(212, 175, 55, .4); }
+        .btn-maroon:not(:disabled):hover { background: #2D040D; border-color: #D4AF37; }
+        .btn-line { border: 1px solid rgba(74, 8, 23, .3); color: #4A0817; background: #fff; }
+        .btn-line:not(:disabled):hover { border-color: #4A0817; }
+        .icon-btn { width: 34px; height: 34px; display: inline-flex; align-items: center; justify-content: center; border-radius: 2px; color: #5C4636; transition: all .2s; }
+        .icon-btn:hover:not(:disabled) { background: #F3ECE0; color: #4A0817; }
+        .icon-btn:disabled { opacity: .3; }
+        .icon-btn.danger:hover { background: #fde8e8; color: #9b1c1c; }
+        .tab { padding: .9rem .25rem; font-size: 11px; font-weight: 700; letter-spacing: .2em; text-transform: uppercase; color: rgba(250, 246, 238, .7); border-bottom: 2px solid transparent; }
+        .tab.on { color: #D4AF37; border-color: #D4AF37; }
+        .row-hidden > img, .row-hidden > div:nth-child(2) { opacity: .5; }
+        #modal { transition: opacity .25s; }
+        #modal.closed { opacity: 0; pointer-events: none; }
+        #modal .panel { transition: transform .3s cubic-bezier(.2, .8, .2, 1); }
+        #modal.closed .panel { transform: translateY(16px) scale(.98); }
+        .spinner { width: 14px; height: 14px; border: 2px solid currentColor; border-right-color: transparent; border-radius: 50%; animation: spin .7s linear infinite; }
+        @keyframes spin { to { transform: rotate(360deg); } }
+        .drop.drag { border-color: #7A5C18; background: #F3ECE0; }
+    </style>
+</head>
+<body class="font-montserrat text-richBurgundy min-h-screen antialiased">
+
+    <!-- HEADER -->
+    <header class="dark relative overflow-hidden bg-richBurgundy border-b border-warmGold/30 text-silkVanilla">
+        <div class="dot-field"></div>
+        <div class="relative max-w-6xl mx-auto px-4 sm:px-6">
+            <div class="flex items-center justify-between gap-4 py-4">
+                <div class="flex items-center gap-3">
+                    <div>
+                        <span class="font-playfair text-xl font-bold tracking-[0.2em] text-gold-gradient block leading-none">WEBLUXE</span>
+                        <span class="font-cormorant text-[10px] tracking-[0.4em] text-warmGold uppercase">Admin Panel</span>
+                    </div>
+                </div>
+                <div class="flex items-center gap-2 sm:gap-3">
+                    <span id="connStatus" class="hidden sm:inline-flex items-center gap-2 text-[11px] text-creamAccent/80"></span>
+                    <a href="../" target="_blank" class="btn btn-maroon"><i class="fa-solid fa-arrow-up-right-from-square"></i><span class="hidden sm:inline">View site</span></a>
+                    <button id="publishBtn" class="btn btn-gold hidden" onclick="publish()" disabled><i class="fa-solid fa-cloud-arrow-up"></i><span>Publish</span><span id="dirtyBadge" class="hidden bg-richBurgundy text-warmGold rounded-full px-1.5 text-[10px]"></span></button>
+                </div>
+            </div>
+            <nav id="tabs" class="hidden flex gap-6 -mb-px" role="tablist">
+                <button class="tab on" data-tab="products" onclick="showTab('products')" role="tab">Products</button>
+                <button class="tab" data-tab="announcements" onclick="showTab('announcements')" role="tab">Announcements</button>
+                <button class="tab" data-tab="settings" onclick="showTab('settings')" role="tab">Connection</button>
+            </nav>
+        </div>
+    </header>
+
+    <main class="max-w-6xl mx-auto px-4 sm:px-6 py-8">
+
+        <!-- CONNECT -->
+        <section id="connectView" class="max-w-xl mx-auto">
+            <div class="bg-white border border-warmGold/40 rounded-sm shadow-xl p-6 sm:p-8">
+                <div class="text-center mb-6">
+                    <span class="w-14 h-14 mx-auto rounded-full bg-royalMaroon border-2 border-warmGold text-warmGold flex items-center justify-center text-xl"><i class="fa-solid fa-key"></i></span>
+                    <h1 class="font-playfair text-2xl font-bold mt-3">The shop owner's panel</h1>
+                    <p class="font-cormorant text-lg text-cocoa mt-1">Add new pieces, change prices and photos, hide sold items and edit the announcements. Changes go live on the website in 1–2 minutes.</p>
+                </div>
+                <div id="demoBox" class="bg-silkVanilla border border-warmGold/50 rounded-sm p-5 mb-6 text-center">
+                    <p class="font-montserrat text-[10px] font-bold tracking-[0.25em] uppercase text-deepGold">Demo website</p>
+                    <p class="font-cormorant text-lg text-cocoa mt-1 leading-snug">Try the shop owner's panel: add a piece, change a price, upload a photo, then press <b>Publish</b> and open the shop. Your changes show only on this device.</p>
+                    <button type="button" onclick="startDemo()" class="btn btn-maroon w-full !py-3.5 mt-4">Open the demo panel <i class="fa-solid fa-arrow-right-long"></i></button>
+                </div>
+                <details id="realSignIn"><summary class="cursor-pointer text-xs font-semibold text-deepGold text-center mb-4">Sign in for real (shop owners)</summary>
+                <form onsubmit="connect(event)" class="space-y-4">
+                    <div>
+                        <label class="label" for="tokenInput">GitHub access token</label>
+                        <input id="tokenInput" type="password" class="field font-mono text-sm" placeholder="github_pat_…" autocomplete="off" required>
+                    </div>
+                    <label class="flex items-center gap-2 text-xs text-cocoa"><input id="rememberInput" type="checkbox" class="accent-[#7A5C18]"> Remember on this device (only tick this on your own computer)</label>
+                    <details class="text-xs text-cocoa">
+                        <summary class="cursor-pointer font-semibold text-deepGold">Repository settings</summary>
+                        <div class="grid grid-cols-3 gap-3 mt-3">
+                            <div><label class="label" for="ownerInput">Owner</label><input id="ownerInput" class="field text-sm" value=""></div>
+                            <div><label class="label" for="repoInput">Repo</label><input id="repoInput" class="field text-sm" value=""></div>
+                            <div><label class="label" for="branchInput">Branch</label><input id="branchInput" class="field text-sm" value="main"></div>
+                        </div>
+                    </details>
+                    <p id="connectError" class="hidden text-sm text-red-800 bg-red-50 border border-red-200 rounded-sm p-3"></p>
+                    <button id="connectBtn" type="submit" class="btn btn-maroon w-full !py-3.5">Connect <i class="fa-solid fa-arrow-right-long"></i></button>
+                </form>
+                </details>
+                <details class="mt-6 text-sm text-cocoa border-t border-warmGold/30 pt-4">
+                    <summary class="cursor-pointer font-semibold text-deepGold">How do I get a token?</summary>
+                    <ol class="list-decimal pl-5 mt-3 space-y-1.5">
+                        <li>Open <a class="underline text-royalMaroon" href="https://github.com/settings/personal-access-tokens/new" target="_blank" rel="noopener">GitHub → Settings → Fine-grained tokens → Generate new token</a>.</li>
+                        <li>Name it "Shop admin" and pick an expiry date.</li>
+                        <li>Under <b>Repository access</b> choose <b>Only select repositories</b> → <b>your shop's repository</b>.</li>
+                        <li>Under <b>Permissions → Repository permissions</b> set <b>Contents</b> to <b>Read and write</b>.</li>
+                        <li>Generate, copy the token and paste it above. Keep it private: anyone with it can edit the site.</li>
+                    </ol>
+                </details>
+            </div>
+        </section>
+
+        <!-- PRODUCTS -->
+        <section id="productsView" class="hidden">
+            <div class="flex flex-wrap items-end justify-between gap-4 mb-6">
+                <div>
+                    <h1 class="font-playfair text-3xl font-bold">Products</h1>
+                    <p class="text-sm text-cocoa mt-1"><span id="prodCount">0</span> pieces · hidden pieces stay saved but don't show on the site</p>
+                </div>
+                <button class="btn btn-maroon" onclick="openEditor()"><i class="fa-solid fa-plus"></i> Add product</button>
+            </div>
+            <div class="flex flex-wrap gap-3 mb-4">
+                <div class="relative flex-1 min-w-[200px]">
+                    <i class="fa-solid fa-magnifying-glass absolute left-3 top-1/2 -translate-y-1/2 text-cocoaSoft text-sm"></i>
+                    <label for="searchInput" class="sr-only">Search products</label>
+                    <input id="searchInput" class="field !pl-9" placeholder="Search by name…" oninput="renderProducts()">
+                </div>
+                <label for="catFilter" class="sr-only">Category</label>
+                <select id="catFilter" class="field !w-auto" onchange="renderProducts()"></select>
+            </div>
+            <div class="bg-white border border-warmGold/30 rounded-sm shadow-sm divide-y divide-warmGold/20" id="productList"></div>
+        </section>
+
+        <!-- ANNOUNCEMENTS -->
+        <section id="announcementsView" class="hidden max-w-3xl">
+            <h1 class="font-playfair text-3xl font-bold">Announcements</h1>
+            <p class="text-sm text-cocoa mt-1 mb-6">These rotate in the bar at the very top of the website, every 5 seconds.</p>
+            <div id="annList" class="space-y-3"></div>
+            <button class="btn btn-line mt-4" onclick="addAnnouncement()"><i class="fa-solid fa-plus"></i> Add announcement</button>
+        </section>
+
+        <!-- SETTINGS -->
+        <section id="settingsView" class="hidden max-w-xl">
+            <h1 class="font-playfair text-3xl font-bold">Connection</h1>
+            <div class="bg-white border border-warmGold/30 rounded-sm p-6 mt-6 space-y-3 text-sm text-cocoa">
+                <p>Connected as <b id="whoami" class="text-richBurgundy"></b> to <b id="repoName" class="text-richBurgundy"></b>.</p>
+                <p>Every publish creates a commit, so you can always see or undo past changes in the repository's history on GitHub.</p>
+                <div class="flex flex-wrap gap-3 pt-2">
+                    <a id="historyLink" class="btn btn-line" target="_blank" rel="noopener"><i class="fa-solid fa-clock-rotate-left"></i> Change history</a>
+                    <button class="btn btn-line" onclick="reloadFromGitHub()"><i class="fa-solid fa-rotate"></i> Reload from GitHub</button>
+                    <button class="btn btn-line !text-red-800" onclick="signOut()"><i class="fa-solid fa-right-from-bracket"></i> Sign out</button>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- EDITOR MODAL -->
+    <div id="modal" class="closed fixed inset-0 z-50 bg-black/60 backdrop-blur-sm flex items-center justify-center p-4" onclick="if(event.target===this)closeEditor()" role="dialog" aria-modal="true" aria-labelledby="editorTitle">
+        <div class="panel bg-silkVanilla border border-warmGold/50 rounded-sm shadow-2xl w-full max-w-2xl max-h-[92vh] overflow-y-auto">
+            <div class="dark relative overflow-hidden bg-richBurgundy text-silkVanilla px-6 py-4 flex items-center justify-between sticky top-0 z-10">
+                <div class="dot-field"></div>
+                <h2 id="editorTitle" class="relative font-playfair text-xl font-bold">Add product</h2>
+                <button onclick="closeEditor()" class="relative text-warmGold hover:text-white text-xl" aria-label="Close"><i class="fa-solid fa-xmark"></i></button>
+            </div>
+            <form id="editorForm" onsubmit="saveEditor(event)" class="p-6 space-y-5">
+                <div>
+                    <label class="label" for="fName">Name</label>
+                    <input id="fName" class="field" required maxlength="80" placeholder="e.g. Crimson Zari Bridal Lehenga">
+                </div>
+                <div class="grid grid-cols-1 sm:grid-cols-3 gap-4">
+                    <div><label class="label" for="fCategory">Category</label><select id="fCategory" class="field"></select></div>
+                    <div><label class="label" for="fPrice">Price (Rs)</label><input id="fPrice" type="number" min="0" step="1" class="field" required></div>
+                    <div>
+                        <label class="label" for="fTag">Badge</label>
+                        <input id="fTag" class="field" list="tagOptions" maxlength="16" placeholder="None">
+                        <datalist id="tagOptions"><option value="New"><option value="Bestseller"><option value="Groom"><option value="Sale"><option value="Limited"></datalist>
+                    </div>
+                </div>
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-5">
+                    <div data-photo="img"></div>
+                    <div data-photo="hover"></div>
+                </div>
+                <label class="flex items-center gap-2 text-sm text-cocoa"><input id="fHidden" type="checkbox" class="accent-[#7A5C18]"> Hide from website (e.g. sold out)</label>
+                <div class="flex justify-end gap-3 pt-2 border-t border-warmGold/30">
+                    <button type="button" class="btn btn-line" onclick="closeEditor()">Cancel</button>
+                    <button type="submit" class="btn btn-maroon"><i class="fa-solid fa-check"></i> Save</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- TOAST -->
+    <div id="toast" class="fixed bottom-6 left-1/2 -translate-x-1/2 z-[60] bg-royalMaroon border border-warmGold/70 text-silkVanilla px-4 py-3 rounded-sm shadow-2xl flex items-center gap-3 text-sm opacity-0 translate-y-4 transition-all duration-300 pointer-events-none max-w-[calc(100vw-2rem)]" role="status" aria-live="polite">
+        <i id="toastIcon" class="fa-solid fa-circle-check text-warmGold"></i><span id="toastMsg"></span>
+    </div>
+
+    <script src="../data.js"></script>
+    <script>
+        /* ==========================================================================
+           CONFIG — keep CATEGORIES in step with index.html
+           ========================================================================== */
+        const CATEGORIES = [
+            { key: 'bridal', label: 'Bridal Lehengas' }, { key: 'lehenga', label: 'Party Lehengas' },
+            { key: 'saree', label: 'Sarees' }, { key: 'gown', label: 'Gowns & Anarkalis' },
+            { key: 'groom', label: 'Groom Sherwanis' }, { key: 'men', label: "Men's Kurtas" }
+        ];
+        const CAT_LABEL = Object.fromEntries(CATEGORIES.map(c => [c.key, c.label]));
+        const DATA_PATH = 'data.js';
+        const IMAGE_DIR = 'images';
+        const MAX_IMG = 1400;            // longest side for uploaded photos, in px (demo: 700)
+        const LS_KEY = 'hf_admin';
+
+        let gh = null;                    // { token, owner, repo, branch, login }
+        let data = { announcements: [], products: [] };
+        let dataSha = null;
+        let dirty = 0;
+        let editingId = null;
+        const localPreviews = {};         // freshly uploaded path -> data URL (Pages takes a minute to serve new files)
+
+        const $ = id => document.getElementById(id);
+        const esc = s => String(s ?? '').replace(/[&<>"']/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]));
+        const rs = n => 'Rs ' + Math.round(Number(n) || 0).toLocaleString('en-US');
+        function imgSrc(v, w = 300) {
+            if (!v) return '';
+            if (localPreviews[v]) return localPreviews[v];
+            if (/^data:/.test(v)) return v;   // demo photos live in the browser
+            if (/^(https?:)?\/\//.test(v)) return v;
+            if (/[\/.]/.test(v)) return '../' + v.replace(/^\.?\//, '');
+            return `https://images.unsplash.com/photo-${v}?auto=format&fit=crop&w=${w}&q=70`;
+        }
+
+        let toastTimer;
+        function toast(msg, isError) {
+            const t = $('toast');
+            $('toastMsg').textContent = msg;
+            $('toastIcon').className = isError ? 'fa-solid fa-triangle-exclamation text-red-300' : 'fa-solid fa-circle-check text-warmGold';
+            t.classList.remove('opacity-0', 'translate-y-4');
+            clearTimeout(toastTimer);
+            toastTimer = setTimeout(() => t.classList.add('opacity-0', 'translate-y-4'), isError ? 6000 : 3000);
+        }
+
+        /* ==========================================================================
+           GITHUB API
+           ========================================================================== */
+        function b64encodeBytes(bytes) {
+            let bin = '';
+            for (let i = 0; i < bytes.length; i += 0x8000) bin += String.fromCharCode.apply(null, bytes.subarray(i, i + 0x8000));
+            return btoa(bin);
+        }
+        const b64encodeText = s => b64encodeBytes(new TextEncoder().encode(s));
+        const b64decodeText = b => new TextDecoder().decode(Uint8Array.from(atob(b.replace(/\s/g, '')), c => c.charCodeAt(0)));
+
+        async function api(path, opts = {}) {
+            const res = await fetch('https://api.github.com' + path, {
+                ...opts,
+                headers: { 'Authorization': 'Bearer ' + gh.token, 'Accept': 'application/vnd.github+json', 'X-GitHub-Api-Version': '2022-11-28', ...(opts.body ? { 'Content-Type': 'application/json' } : {}) }
+            });
+            if (!res.ok) {
+                let msg = res.status + ' ' + res.statusText;
+                try { const j = await res.json(); if (j.message) msg = j.message; } catch (e) {}
+                if (res.status === 401) msg = 'The token was rejected. It may be wrong or expired.';
+                if (res.status === 403 || res.status === 404) msg += ' (check the token has Contents: Read and write on this repository)';
+                const err = new Error(msg); err.status = res.status; throw err;
+            }
+            return res.status === 204 ? null : res.json();
+        }
+        const repoPath = p => `/repos/${encodeURIComponent(gh.owner)}/${encodeURIComponent(gh.repo)}/contents/${p.split('/').map(encodeURIComponent).join('/')}`;
+
+        async function fetchData() {
+            const f = await api(repoPath(DATA_PATH) + '?ref=' + encodeURIComponent(gh.branch) + '&t=' + Date.now());
+            const text = b64decodeText(f.content);
+            const m = text.match(/window\.SITE_DATA\s*=\s*([\s\S]*?);?\s*$/);
+            if (!m) throw new Error('data.js is not in the expected format.');
+            const parsed = JSON.parse(m[1]);
+            return { parsed, sha: f.sha };
+        }
+        function serialise(d) {
+            return '/* Site data: edited by the admin panel (/admin). Safe to edit by hand too: keep it valid JSON after the = sign. */\n' +
+                   'window.SITE_DATA = ' + JSON.stringify(d, null, 2) + ';\n';
+        }
+
+        /* ==========================================================================
+           CONNECT / SIGN OUT
+           ========================================================================== */
+        async function connect(e, saved) {
+            if (e) e.preventDefault();
+            const err = $('connectError');
+            err.classList.add('hidden');
+            gh = saved || {
+                token: $('tokenInput').value.trim(), owner: $('ownerInput').value.trim(),
+                repo: $('repoInput').value.trim(), branch: $('branchInput').value.trim() || 'main'
+            };
+            const btn = $('connectBtn');
+            btn.disabled = true; btn.innerHTML = '<span class="spinner"></span> Connecting…';
+            try {
+                const [user, repo] = await Promise.all([api('/user').catch(() => ({ login: 'token' })), api(`/repos/${gh.owner}/${gh.repo}`)]);
+                if (repo.permissions && !repo.permissions.push) throw new Error('This token can read the repository but not write to it. Set Contents to "Read and write".');
+                gh.login = user.login;
+                const { parsed, sha } = await fetchData();
+                data = normalise(parsed); dataSha = sha;
+                if (!saved && $('rememberInput').checked) localStorage.setItem(LS_KEY, JSON.stringify(gh));
+                if (!saved && !$('rememberInput').checked) sessionStorage.setItem(LS_KEY, JSON.stringify(gh));
+                setDirty(0);
+                enterApp();
+            } catch (ex) {
+                gh = null;
+                err.textContent = ex.message; err.classList.remove('hidden');
+                if (saved) { localStorage.removeItem(LS_KEY); sessionStorage.removeItem(LS_KEY); }
+            } finally {
+                btn.disabled = false; btn.innerHTML = 'Connect <i class="fa-solid fa-arrow-right-long"></i>';
+            }
+        }
+        function normalise(d) {
+            return {
+                ...d,
+                announcements: Array.isArray(d.announcements) ? d.announcements : [],
+                products: (Array.isArray(d.products) ? d.products : []).map((p, i) => ({ id: p.id ?? i + 1, name: '', category: 'bridal', price: 0, img: '', hover: '', tag: '', ...p }))
+            };
+        }
+        function enterApp() {
+            $('connectView').classList.add('hidden');
+            $('publishBtn').classList.remove('hidden');
+            $('tabs').classList.remove('hidden');
+            $('connStatus').innerHTML = `<span class="w-2 h-2 rounded-full bg-emerald-400"></span> ${esc(gh.login)}`;
+            $('whoami').textContent = gh.login;
+            $('repoName').textContent = `${gh.owner}/${gh.repo} (${gh.branch})`;
+            $('historyLink').href = `https://github.com/${gh.owner}/${gh.repo}/commits/${gh.branch}/${DATA_PATH}`;
+            showTab('products');
+            renderAll();
+        }
+        function signOut() {
+            if (gh && gh.demo) { location.reload(); return; }
+            if (dirty && !confirm('You have unpublished changes. Sign out and lose them?')) return;
+            localStorage.removeItem(LS_KEY); sessionStorage.removeItem(LS_KEY);
+            dirty = 0; location.reload();
+        }
+        async function reloadFromGitHub() {
+            if (gh && gh.demo) { if (confirm('Reset the demo shop to the example pieces?')) resetDemo(); return; }
+            if (dirty && !confirm('Discard your unpublished changes and reload what is on GitHub?')) return;
+            try { const { parsed, sha } = await fetchData(); data = normalise(parsed); dataSha = sha; setDirty(0); renderAll(); toast('Reloaded from GitHub'); }
+            catch (ex) { toast(ex.message, true); }
+        }
+
+        /* ==========================================================================
+           UI STATE
+           ========================================================================== */
+        function showTab(name) {
+            ['products', 'announcements', 'settings'].forEach(t => $(t + 'View').classList.toggle('hidden', t !== name));
+            document.querySelectorAll('.tab').forEach(b => { b.classList.toggle('on', b.dataset.tab === name); b.setAttribute('aria-selected', b.dataset.tab === name); });
+        }
+        function setDirty(n) {
+            dirty = n;
+            $('publishBtn').disabled = !gh || dirty === 0;
+            $('dirtyBadge').textContent = dirty;
+            $('dirtyBadge').classList.toggle('hidden', dirty === 0);
+        }
+        const touch = () => setDirty(dirty + 1);
+        window.addEventListener('beforeunload', e => { if (dirty) { e.preventDefault(); e.returnValue = ''; } });
+        document.addEventListener('keydown', e => { if (e.key === 'Escape') closeEditor(); });
+
+        function renderAll() { renderProducts(); renderAnnouncements(); }
+
+        /* ==========================================================================
+           PRODUCTS
+           ========================================================================== */
+        function renderProducts() {
+            const q = $('searchInput').value.trim().toLowerCase();
+            const cat = $('catFilter').value;
+            $('prodCount').textContent = data.products.length;
+            const list = $('productList');
+            const rows = data.products.map((p, i) => ({ p, i })).filter(({ p }) => (cat === 'all' || p.category === cat) && (!q || p.name.toLowerCase().includes(q)));
+            if (!rows.length) { list.innerHTML = `<div class="p-10 text-center font-cormorant text-xl text-cocoa">No products match.</div>`; return; }
+            const canMove = !q && cat === 'all';
+            list.innerHTML = rows.map(({ p, i }) => `
+                <div class="flex items-center gap-3 sm:gap-4 p-3 sm:p-4 ${p.hidden ? 'row-hidden' : ''}">
+                    <img src="${esc(imgSrc(p.img))}" alt="" loading="lazy" class="w-12 h-16 sm:w-14 sm:h-[74px] object-cover object-top rounded-sm bg-creamAccent border border-warmGold/30 shrink-0">
+                    <div class="flex-1 min-w-0">
+                        <div class="font-playfair font-bold text-base truncate">${esc(p.name) || '<i class="text-cocoaSoft">Untitled</i>'}</div>
+                        <div class="text-[11px] text-cocoa mt-0.5 flex flex-wrap items-center gap-x-3 gap-y-1">
+                            <span class="uppercase tracking-widest font-semibold">${esc(CAT_LABEL[p.category] || p.category)}</span>
+                            <span class="font-bold text-royalMaroon">${rs(p.price)}</span>
+                            ${p.tag ? `<span class="bg-royalMaroon text-warmGold px-1.5 py-0.5 rounded-sm text-[9px] font-bold uppercase tracking-widest">${esc(p.tag)}</span>` : ''}
+                            ${p.hidden ? `<span class="text-[9px] font-bold uppercase tracking-widest border border-cocoaSoft/40 px-1.5 py-0.5 rounded-sm">Hidden</span>` : ''}
+                        </div>
+                    </div>
+                    <div class="flex items-center shrink-0">
+                        <button class="icon-btn hidden sm:inline-flex" onclick="moveProduct(${i},-1)" ${!canMove || i === 0 ? 'disabled' : ''} aria-label="Move up" title="Move up"><i class="fa-solid fa-arrow-up"></i></button>
+                        <button class="icon-btn hidden sm:inline-flex" onclick="moveProduct(${i},1)" ${!canMove || i === data.products.length - 1 ? 'disabled' : ''} aria-label="Move down" title="Move down"><i class="fa-solid fa-arrow-down"></i></button>
+                        <button class="icon-btn" onclick="toggleHidden(${i})" aria-label="${p.hidden ? 'Show on site' : 'Hide from site'}" title="${p.hidden ? 'Show on site' : 'Hide from site'}"><i class="fa-regular ${p.hidden ? 'fa-eye-slash' : 'fa-eye'}"></i></button>
+                        <button class="icon-btn" onclick="openEditor(${p.id})" aria-label="Edit" title="Edit"><i class="fa-solid fa-pen"></i></button>
+                        <button class="icon-btn danger" onclick="deleteProduct(${i})" aria-label="Delete" title="Delete"><i class="fa-regular fa-trash-can"></i></button>
+                    </div>
+                </div>`).join('');
+        }
+        function moveProduct(i, d) {
+            const j = i + d;
+            if (j < 0 || j >= data.products.length) return;
+            [data.products[i], data.products[j]] = [data.products[j], data.products[i]];
+            touch(); renderProducts();
+        }
+        function toggleHidden(i) { data.products[i].hidden = !data.products[i].hidden; if (!data.products[i].hidden) delete data.products[i].hidden; touch(); renderProducts(); }
+        function deleteProduct(i) {
+            if (!confirm(`Delete "${data.products[i].name}"? This can't be undone after you publish.`)) return;
+            data.products.splice(i, 1); touch(); renderProducts();
+        }
+
+        /* ---------- photo pickers ---------- */
+        function photoPicker(key, label) {
+            return `
+                <span class="label">${label}</span>
+                <div class="drop border-2 border-dashed border-warmGold/50 rounded-sm p-3 bg-white transition-colors" data-key="${key}">
+                    <div class="aspect-[3/4] bg-creamAccent rounded-sm overflow-hidden relative flex items-center justify-center">
+                        <img data-preview="${key}" alt="" class="absolute inset-0 w-full h-full object-cover object-top hidden">
+                        <span data-empty="${key}" class="text-center text-xs text-cocoa px-4"><i class="fa-regular fa-image text-3xl text-deepGold/60 block mb-2"></i>Drop a photo here<br>or choose one below</span>
+                        <span data-busy="${key}" class="hidden absolute inset-0 bg-richBurgundy/70 text-warmGold flex items-center justify-center gap-2 text-xs font-bold uppercase tracking-widest"><span class="spinner"></span> Uploading</span>
+                    </div>
+                    <div class="flex gap-2 mt-3">
+                        <label class="btn btn-maroon flex-1 cursor-pointer !px-2"><i class="fa-solid fa-upload"></i> Upload<input type="file" accept="image/*" class="sr-only" onchange="uploadPhoto('${key}', this.files[0]); this.value=''"></label>
+                        <button type="button" class="btn btn-line !px-3" onclick="clearPhoto('${key}')" aria-label="Remove photo"><i class="fa-solid fa-xmark"></i></button>
+                    </div>
+                    <label class="sr-only" for="f_${key}">${label} link or Unsplash ID</label>
+                    <input id="f_${key}" data-field="${key}" class="field !text-xs mt-2 font-mono" placeholder="…or paste an image link" oninput="previewPhoto('${key}')">
+                </div>`;
+        }
+        function previewPhoto(key) {
+            const v = document.querySelector(`[data-field="${key}"]`).value.trim();
+            const img = document.querySelector(`[data-preview="${key}"]`);
+            img.classList.toggle('hidden', !v);
+            document.querySelector(`[data-empty="${key}"]`).classList.toggle('hidden', !!v);
+            if (v) img.src = imgSrc(v, 600);
+        }
+        function clearPhoto(key) { document.querySelector(`[data-field="${key}"]`).value = ''; previewPhoto(key); }
+
+        function slug(s) { return (s || 'photo').toLowerCase().normalize('NFKD').replace(/[^\w\s-]/g, '').trim().replace(/[\s_]+/g, '-').slice(0, 40) || 'photo'; }
+        function resizeImage(file) {
+            return new Promise((resolve, reject) => {
+                const url = URL.createObjectURL(file);
+                const im = new Image();
+                im.onload = () => {
+                    const scale = Math.min(1, (gh && gh.demo ? 700 : MAX_IMG) / Math.max(im.width, im.height));
+                    const c = document.createElement('canvas');
+                    c.width = Math.round(im.width * scale); c.height = Math.round(im.height * scale);
+                    const ctx = c.getContext('2d');
+                    ctx.fillStyle = '#fff'; ctx.fillRect(0, 0, c.width, c.height);
+                    ctx.drawImage(im, 0, 0, c.width, c.height);
+                    URL.revokeObjectURL(url);
+                    resolve(c.toDataURL('image/jpeg', gh && gh.demo ? 0.78 : 0.85));
+                };
+                im.onerror = () => { URL.revokeObjectURL(url); reject(new Error('That file could not be read as an image.')); };
+                im.src = url;
+            });
+        }
+        async function uploadPhoto(key, file) {
+            if (!file) return;
+            if (!file.type.startsWith('image/')) { toast('Please choose an image file.', true); return; }
+            const busy = document.querySelector(`[data-busy="${key}"]`);
+            busy.classList.remove('hidden');
+            try {
+                const dataUrl = await resizeImage(file);
+                if (gh.demo) {   // demo: the photo stays in this browser
+                    document.querySelector(`[data-field="${key}"]`).value = dataUrl;
+                    previewPhoto(key);
+                    toast('Photo added. Remember to Save and Publish.');
+                    return;
+                }
+                const name = `${slug($('fName').value)}-${key === 'hover' ? 'alt-' : ''}${Date.now().toString(36)}.jpg`;
+                const path = `${IMAGE_DIR}/${name}`;
+                await api(repoPath(path), { method: 'PUT', body: JSON.stringify({ message: `Upload photo ${name}`, content: dataUrl.split(',')[1], branch: gh.branch }) });
+                localPreviews[path] = dataUrl;
+                document.querySelector(`[data-field="${key}"]`).value = path;
+                previewPhoto(key);
+                toast('Photo uploaded. Remember to Save and Publish.');
+            } catch (ex) { toast(ex.message, true); }
+            finally { busy.classList.add('hidden'); }
+        }
+        function wireDrops() {
+            document.querySelectorAll('.drop').forEach(z => {
+                const key = z.dataset.key;
+                ['dragenter', 'dragover'].forEach(ev => z.addEventListener(ev, e => { e.preventDefault(); z.classList.add('drag'); }));
+                ['dragleave', 'drop'].forEach(ev => z.addEventListener(ev, e => { e.preventDefault(); z.classList.remove('drag'); }));
+                z.addEventListener('drop', e => { const f = e.dataTransfer.files[0]; if (f) uploadPhoto(key, f); });
+            });
+        }
+
+        /* ---------- editor ---------- */
+        function openEditor(id) {
+            editingId = id ?? null;
+            const p = id != null ? data.products.find(x => x.id === id) : { name: '', category: $('catFilter').value !== 'all' ? $('catFilter').value : 'bridal', price: '', img: '', hover: '', tag: 'New' };
+            $('editorTitle').textContent = id != null ? 'Edit product' : 'Add product';
+            $('fName').value = p.name; $('fCategory').value = p.category; $('fPrice').value = p.price; $('fTag').value = p.tag || ''; $('fHidden').checked = !!p.hidden;
+            document.querySelector('[data-photo="img"]').innerHTML = photoPicker('img', 'Main photo');
+            document.querySelector('[data-photo="hover"]').innerHTML = photoPicker('hover', 'Second photo (on hover)');
+            document.querySelector('[data-field="img"]').value = p.img || '';
+            document.querySelector('[data-field="hover"]').value = p.hover || '';
+            previewPhoto('img'); previewPhoto('hover'); wireDrops();
+            $('modal').classList.remove('closed');
+            setTimeout(() => $('fName').focus(), 50);
+        }
+        function closeEditor() { $('modal').classList.add('closed'); }
+        function saveEditor(e) {
+            e.preventDefault();
+            const img = document.querySelector('[data-field="img"]').value.trim();
+            if (!img) { toast('Please add a main photo.', true); return; }
+            const fields = {
+                name: $('fName').value.trim(), category: $('fCategory').value, price: Math.max(0, Math.round(Number($('fPrice').value) || 0)),
+                img, hover: document.querySelector('[data-field="hover"]').value.trim(), tag: $('fTag').value.trim()
+            };
+            if (editingId != null) {
+                const p = data.products.find(x => x.id === editingId);
+                Object.assign(p, fields);
+                if ($('fHidden').checked) p.hidden = true; else delete p.hidden;
+            } else {
+                const id = data.products.reduce((m, p) => Math.max(m, Number(p.id) || 0), 0) + 1;
+                const p = { id, ...fields };
+                if ($('fHidden').checked) p.hidden = true;
+                data.products.unshift(p);   // new pieces go to the top of the collection
+            }
+            touch(); closeEditor(); renderProducts();
+            toast(editingId != null ? 'Product updated. Publish to make it live.' : 'Product added. Publish to make it live.');
+        }
+
+        /* ==========================================================================
+           ANNOUNCEMENTS
+           ========================================================================== */
+        function renderAnnouncements() {
+            const list = $('annList');
+            if (!data.announcements.length) { list.innerHTML = `<p class="text-sm text-cocoa italic">No announcements. The bar will show the default text.</p>`; return; }
+            list.innerHTML = data.announcements.map((a, i) => `
+                <div class="flex items-center gap-2 bg-white border border-warmGold/30 rounded-sm p-2">
+                    <span class="w-7 text-center text-xs font-bold text-deepGold">${i + 1}</span>
+                    <label class="sr-only" for="ann${i}">Announcement ${i + 1}</label>
+                    <input id="ann${i}" class="field !border-transparent focus:!border-deepGold" value="${esc(a)}" maxlength="90" oninput="data.announcements[${i}] = this.value; if(!this.dataset.t){this.dataset.t=1; touch();}">
+                    <button class="icon-btn" onclick="moveAnn(${i},-1)" ${i === 0 ? 'disabled' : ''} aria-label="Move up"><i class="fa-solid fa-arrow-up"></i></button>
+                    <button class="icon-btn" onclick="moveAnn(${i},1)" ${i === data.announcements.length - 1 ? 'disabled' : ''} aria-label="Move down"><i class="fa-solid fa-arrow-down"></i></button>
+                    <button class="icon-btn danger" onclick="data.announcements.splice(${i},1); touch(); renderAnnouncements()" aria-label="Delete"><i class="fa-regular fa-trash-can"></i></button>
+                </div>`).join('');
+        }
+        function moveAnn(i, d) { const a = data.announcements, j = i + d; [a[i], a[j]] = [a[j], a[i]]; touch(); renderAnnouncements(); }
+        function addAnnouncement() { data.announcements.push(''); touch(); renderAnnouncements(); $('ann' + (data.announcements.length - 1)).focus(); }
+
+        /* ==========================================================================
+           PUBLISH
+           ========================================================================== */
+        async function publish() {
+            if (!gh || !dirty) return;
+            if (gh.demo) {
+                data.announcements = data.announcements.map(s => s.trim()).filter(Boolean);
+                try { localStorage.setItem(DEMO_KEY, JSON.stringify(data)); }
+                catch (e) { toast('This device is out of space for demo photos. Remove a photo and try again.', true); return; }
+                setDirty(0); renderAll();
+                toast('Published to the demo shop. Press "View site" to see it.');
+                return;
+            }
+            const bad = data.products.find(p => !p.name || !p.img);
+            if (bad) { toast('Every product needs a name and a main photo.', true); return; }
+            data.announcements = data.announcements.map(s => s.trim()).filter(Boolean);
+            const btn = $('publishBtn');
+            btn.disabled = true; btn.innerHTML = '<span class="spinner"></span> Publishing…';
+            try {
+                const latest = await api(repoPath(DATA_PATH) + '?ref=' + encodeURIComponent(gh.branch) + '&t=' + Date.now());
+                if (latest.sha !== dataSha && !confirm('The product list was changed on GitHub since you loaded it (maybe from another device). Publish anyway and replace those changes?')) throw new Error('Publish cancelled. Use Connection → Reload from GitHub to get the latest.');
+                const res = await api(repoPath(DATA_PATH), { method: 'PUT', body: JSON.stringify({
+                    message: `Update products & announcements from admin (${data.products.length} products)`,
+                    content: b64encodeText(serialise(data)), sha: latest.sha, branch: gh.branch
+                }) });
+                dataSha = res.content.sha;
+                setDirty(0);
+                renderAll();
+                toast('Published! The website updates in about 1–2 minutes.');
+            } catch (ex) { toast(ex.message, true); setDirty(dirty); }
+            finally { btn.innerHTML = '<i class="fa-solid fa-cloud-arrow-up"></i><span>Publish</span><span id="dirtyBadge" class="hidden bg-richBurgundy text-warmGold rounded-full px-1.5 text-[10px]"></span>'; setDirty(dirty); }
+        }
+
+        /* ==========================================================================
+           DEMO: the panel works on a copy kept in this browser (localStorage
+           'wl_demo_data'); the shop page reads that copy, so a prospect sees their
+           edits on the site. Nothing is sent to GitHub.
+           ========================================================================== */
+        const DEMO_KEY = 'wl_demo_data:' + location.pathname.split('/')[1];   // one copy per site
+        function startDemo() {
+            gh = { demo: true, login: 'Demo shop owner', owner: 'demo', repo: 'shop', branch: 'main' };
+            let saved = null;
+            try { saved = JSON.parse(localStorage.getItem(DEMO_KEY) || 'null'); } catch (e) {}
+            data = normalise(saved || JSON.parse(JSON.stringify(window.SITE_DATA || { announcements: [], products: [] })));
+            dataSha = 'demo';
+            setDirty(0);
+            enterApp();
+            $('repoName').textContent = 'Demo (saved on this device only)';
+            $('historyLink').classList.add('hidden');
+            toast('Demo panel: try anything, then press Publish and View site.');
+        }
+        function resetDemo() {
+            try { localStorage.removeItem(DEMO_KEY); } catch (e) {}
+            data = normalise(JSON.parse(JSON.stringify(window.SITE_DATA))); setDirty(0); renderAll();
+            toast('Demo reset to the example shop.');
+        }
+
+        /* ==========================================================================
+           INIT
+           ========================================================================== */
+        $('fCategory').innerHTML = CATEGORIES.map(c => `<option value="${c.key}">${esc(c.label)}</option>`).join('');
+        $('catFilter').innerHTML = `<option value="all">All categories</option>` + CATEGORIES.map(c => `<option value="${c.key}">${esc(c.label)}</option>`).join('');
+        (function autoConnect() {
+            let saved = null;
+            try { saved = JSON.parse(localStorage.getItem(LS_KEY) || sessionStorage.getItem(LS_KEY) || 'null'); } catch (e) {}
+            if (saved && saved.token) connect(null, saved);
+        })();
+    </script>
+</body>
+</html>

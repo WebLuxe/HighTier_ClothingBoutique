@@ -1,0 +1,1418 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WebLuxe High Fashion Boutique | Indian Bridal &amp; Ethnic Wear in Mauritius</title>
+    <meta name="description" content="WebLuxe High Fashion Boutique — Indian bridal &amp; non-bridal specialist in Mauritius. Bridal lehengas, sarees, gowns, sherwanis and men's ethnic wear. Boutiques in Rose Hill and Grand Baie.">
+    <meta name="theme-color" content="#4A0817">
+    <meta property="og:title" content="WebLuxe High Fashion Boutique | Be a fashionista">
+    <meta property="og:description" content="A panoply of exquisite latest Indian wear — bridal, party wear and men's ethnic wear in Mauritius.">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="https://images.unsplash.com/photo-1721324807083-e9ddaa99310e?auto=format&fit=crop&w=1200&q=80">
+    <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='12' fill='%234A0817'/%3E%3Cg fill='none' stroke='%23D4AF37' stroke-width='2.2' stroke-linejoin='round'%3E%3Cpath d='M32 14c6 7 6 17 0 26-6-9-6-19 0-26z'/%3E%3Cpath d='M32 40c-8-2-13-9-13-16 7 2 12 8 13 16z'/%3E%3Cpath d='M32 40c8-2 13-9 13-16-7 2-12 8-13 16z'/%3E%3Cpath d='M18 46q14 6 28 0'/%3E%3C/g%3E%3C/svg%3E">
+
+    <script>
+        document.documentElement.classList.add('js');
+        setTimeout(function () { if (document.body) { document.body.classList.add('is-loaded'); document.body.classList.remove('overflow-hidden'); } }, 7000);
+    </script>
+
+    <link rel="stylesheet" href="tw.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&family=Montserrat:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,600;0,700;0,900;1,400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <style>
+        /* ============ BASE ============ */
+        ::-webkit-scrollbar { width: 7px; }
+        ::-webkit-scrollbar-track { background: #2D040D; }
+        ::-webkit-scrollbar-thumb { background: #C5A059; border-radius: 3px; }
+        .no-scrollbar::-webkit-scrollbar { display: none; }
+        .no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+        .rounded-xs { border-radius: 2px; }
+        section[id] { scroll-margin-top: 84px; }
+        :focus-visible { outline: 2px solid #D4AF37; outline-offset: 3px; }
+        /* Light pages: a subtle antique-gold dot texture on the cream background */
+        body { background-color: #FAF6EE; background-image: radial-gradient(circle, rgba(154, 118, 40, .2) 0 1.1px, transparent 1.7px); background-size: 26px 26px; }
+        .on-light :focus-visible { outline-color: #7A5C18; }
+
+        @keyframes goldGlint { 0% { background-position: -200% 0; } 100% { background-position: 200% 0; } }
+        .gold-shimmer {
+            background: linear-gradient(110deg, #C5A059 0%, #D4AF37 25%, #FFF8DC 50%, #D4AF37 75%, #C5A059 100%);
+            background-size: 200% 100%; animation: goldGlint 6s infinite linear;
+        }
+        .text-gold-gradient {
+            background: linear-gradient(135deg, #FAF6EE 0%, #D4AF37 50%, #C5A059 100%);
+            -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent;
+        }
+        /* ============ GOLD DOT FIELD (backgrounds) ============ */
+        /* Base grid of crisp gold dots + a sparser layer that twinkles, so the pattern reads clearly on large / high-DPI screens */
+        .dot-field { position: absolute; inset: 0; pointer-events: none; z-index: 0;
+            background-image: radial-gradient(circle, rgba(230, 202, 101, .55) 0 1.3px, transparent 1.9px);
+            background-size: 26px 26px;
+            -webkit-mask-image: radial-gradient(ellipse 85% 75% at 50% 45%, #000 35%, rgba(0, 0, 0, .45) 100%);
+                    mask-image: radial-gradient(ellipse 85% 75% at 50% 45%, #000 35%, rgba(0, 0, 0, .45) 100%); }
+        .dot-field::after { content: ''; position: absolute; inset: 0;
+            background-image: radial-gradient(circle, rgba(255, 244, 205, .95) 0 1.7px, rgba(230, 202, 101, .35) 2.4px, transparent 4px);
+            background-size: 78px 78px; background-position: 13px 13px;
+            animation: dotTwinkle 3.6s ease-in-out infinite alternate; }
+        .dot-field.soft { opacity: .7; }
+        @keyframes dotTwinkle { from { opacity: .15; } to { opacity: .85; } }
+        /* Light sections: darker antique-gold dots so they show on cream */
+        .dot-field.on-light { background-image: radial-gradient(circle, rgba(154, 118, 40, .32) 0 1.2px, transparent 1.8px); }
+        .dot-field.on-light::after { background-image: radial-gradient(circle, rgba(184, 140, 46, .55) 0 1.6px, transparent 2.6px); }
+        .hero-dust { position: absolute; inset: 0; pointer-events: none; overflow: hidden; z-index: 1; }
+        .hero-dust b { position: absolute; bottom: -10px; width: var(--s); height: var(--s); border-radius: 50%; background: #F3DD8A; box-shadow: 0 0 8px 1px rgba(230, 202, 101, .8); opacity: 0; animation: dustRise var(--t) linear var(--d) infinite; }
+        .hero-mandala { position: absolute; width: 760px; height: 760px; right: -220px; top: 50%; margin-top: -380px; opacity: .18; pointer-events: none; }
+        .hero-mandala .spin { transform-origin: 100px 100px; animation: spin 120s linear infinite; }
+        .hero-mandala .draw { fill: none; stroke: #E6CA65; stroke-width: .5; }
+        .hero-mandala .draw.thin { stroke-width: .3; }
+        .hero-mandala .draw.lotus { stroke-width: 1; }
+        .hero-mandala .dot { fill: #E6CA65; }
+        @media (max-width: 1023px) { .hero-mandala { right: 50%; margin-right: -380px; opacity: .12; } }
+
+        .filigree-border { border: 1px solid rgba(212, 175, 55, 0.3); position: relative; }
+        .filigree-border::after { content: ''; position: absolute; inset: 3px; border: 1px solid rgba(212, 175, 55, 0.15); pointer-events: none; }
+
+        /* ============ MANDALA (shared) ============ */
+        @keyframes drawLine { from { stroke-dashoffset: 1; } to { stroke-dashoffset: 0; } }
+        @keyframes spin { to { transform: rotate(360deg); } }
+        @keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
+        .mandala .draw, .mandala-w .draw { fill: none; stroke: #D4AF37; stroke-width: .6; stroke-dasharray: 1; }
+        .mandala .draw.thin, .mandala-w .draw.thin { stroke-width: .35; stroke: #C5A059; }
+        .mandala .draw.lotus, .mandala-w .draw.lotus { stroke: #E6CA65; stroke-width: 1.4; }
+        .mandala .dot, .mandala-w .dot { fill: #D4AF37; }
+
+        /* ============ INTRO LOADER ============ */
+        #introLoader {
+            position: fixed; inset: 0; z-index: 100; display: flex; align-items: center; justify-content: center; cursor: pointer;
+            animation: loaderFailsafe .6s ease 7s forwards;
+        }
+        @keyframes loaderFailsafe { to { opacity: 0; visibility: hidden; } }
+        #introLoader.is-done { display: none; }
+        .curtain {
+            position: absolute; top: 0; bottom: 0; width: 50.5%; overflow: hidden;
+            background: radial-gradient(circle at var(--cx, 100%) 50%, rgba(90, 14, 26, .95) 0%, #2D040D 60%), #2D040D;
+            transition: transform 1.15s cubic-bezier(.77, 0, .18, 1);
+        }
+        .curtain::before { content: ''; position: absolute; inset: 0; opacity: .32; background-image: radial-gradient(circle, #E6CA65 0 1.3px, transparent 1.9px); background-size: 24px 24px; }
+        .curtain.left { left: 0; --cx: 100%; }
+        .curtain.right { right: 0; --cx: 0%; }
+        .curtain::after {
+            content: ''; position: absolute; top: 0; bottom: 0; width: 1px; opacity: 0; transition: opacity .4s ease;
+            background: linear-gradient(to bottom, transparent, #D4AF37 30%, #FFF8DC 50%, #D4AF37 70%, transparent);
+        }
+        .curtain.left::after { right: 0; }
+        .curtain.right::after { left: 0; }
+        #introLoader.is-leaving .curtain::after { opacity: 1; }
+        #introLoader.is-leaving .curtain.left { transform: translateX(-101%); }
+        #introLoader.is-leaving .curtain.right { transform: translateX(101%); }
+
+        .loader-content { position: relative; z-index: 2; text-align: center; display: flex; flex-direction: column; align-items: center; transition: opacity .5s ease, transform .7s cubic-bezier(.7, 0, .3, 1), filter .5s ease; }
+        #introLoader.is-leaving .loader-content { opacity: 0; transform: scale(.94); filter: blur(4px); }
+        .mandala-wrap { position: relative; width: 190px; height: 190px; }
+        @media (min-width: 640px) { .mandala-wrap { width: 230px; height: 230px; } }
+        .mandala { width: 100%; height: 100%; overflow: visible; }
+        .mandala .spin { transform-origin: 100px 100px; animation: spin 40s linear infinite; }
+        .mandala .draw { animation: drawLine 1.6s cubic-bezier(.6, .1, .2, 1) both; animation-delay: var(--d, 0s); }
+        .mandala .dot { animation: fadeIn .6s ease both; animation-delay: var(--d, 1.2s); }
+        .mandala .lotus-g { animation: lotusIn 1.4s cubic-bezier(.2, .8, .2, 1) .7s both; transform-origin: 100px 100px; }
+        @keyframes lotusIn { from { opacity: 0; transform: scale(.6); } to { opacity: 1; transform: scale(1); } }
+        .mandala-glow { position: absolute; inset: 18%; border-radius: 50%; background: radial-gradient(circle, rgba(212, 175, 55, .3), transparent 70%); animation: glowPulse 2.6s ease-in-out infinite, fadeIn 1s ease .6s both; }
+        @keyframes glowPulse { 0%, 100% { transform: scale(.9); opacity: .7; } 50% { transform: scale(1.1); opacity: 1; } }
+
+        .brand-letters { margin-top: 28px; display: flex; gap: .08em; font-family: 'Playfair Display', serif; font-weight: 700; font-size: 30px; letter-spacing: .28em; padding-left: .28em; color: #FAF6EE; }
+        @media (min-width: 640px) { .brand-letters { font-size: 44px; } }
+        .brand-letters span { display: inline-block; animation: letterIn .9s cubic-bezier(.2, .8, .2, 1) both; animation-delay: calc(1.05s + var(--i) * .07s); }
+        @keyframes letterIn { from { opacity: 0; transform: translateY(24px); filter: blur(8px); } to { opacity: 1; transform: none; filter: none; } }
+        .brand-sub { margin-top: 6px; font-family: 'Cormorant Garamond', serif; font-weight: 600; font-size: 12px; letter-spacing: .55em; padding-left: .55em; color: #D4AF37; text-transform: uppercase; animation: subIn 1.2s ease 1.8s both; }
+        @media (min-width: 640px) { .brand-sub { font-size: 14px; } }
+        @keyframes subIn { from { opacity: 0; letter-spacing: .15em; } to { opacity: 1; letter-spacing: .55em; } }
+        .loader-progress { margin-top: 34px; width: 180px; height: 1px; background: rgba(212, 175, 55, .2); position: relative; overflow: hidden; animation: fadeIn .6s ease 1.2s both; }
+        .loader-progress i { position: absolute; inset: 0; transform-origin: left; background: linear-gradient(90deg, #C5A059, #FFF8DC, #D4AF37); animation: progressFill 2.2s cubic-bezier(.6, 0, .2, 1) 1.2s both; }
+        @keyframes progressFill { from { transform: scaleX(0); } to { transform: scaleX(1); } }
+        .loader-tagline { margin-top: 14px; font-family: 'Cormorant Garamond', serif; font-style: italic; font-size: 16px; color: rgba(243, 236, 224, .75); letter-spacing: .05em; animation: fadeIn .8s ease 2s both; }
+        .loader-skip { position: absolute; bottom: 28px; left: 50%; transform: translateX(-50%); z-index: 3; font-family: 'Montserrat', sans-serif; font-size: 10px; letter-spacing: .3em; text-transform: uppercase; color: rgba(212, 175, 55, .55); animation: fadeIn .6s ease 1.5s both; transition: opacity .3s; }
+        #introLoader.is-leaving .loader-skip { opacity: 0; }
+        .gold-dust { position: absolute; inset: 0; z-index: 1; pointer-events: none; overflow: hidden; transition: opacity .5s; }
+        #introLoader.is-leaving .gold-dust { opacity: 0; }
+        .gold-dust b { position: absolute; bottom: -10px; width: var(--s); height: var(--s); border-radius: 50%; background: #E6CA65; box-shadow: 0 0 6px #D4AF37; opacity: 0; animation: dustRise var(--t) linear var(--d) infinite; }
+        @keyframes dustRise { 0% { transform: translate(0, 0); opacity: 0; } 15% { opacity: .9; } 100% { transform: translate(var(--x), -105vh); opacity: 0; } }
+        #introLoader.fast * { animation: none !important; }
+        #introLoader.fast .mandala .spin { animation: spin 40s linear infinite !important; }
+
+        /* ============ SECTION TRANSITION: silk pleat curtain ============ */
+        #sectionWipe { position: fixed; inset: 0; z-index: 90; pointer-events: none; visibility: hidden; }
+        #sectionWipe.is-active { pointer-events: auto; visibility: visible; }
+        .pleat {
+            position: absolute; top: 0; bottom: 0; transform: translateY(-101%);
+            background: linear-gradient(90deg, #22030a 0%, #4A0817 35%, #5A0E1A 50%, #4A0817 65%, #22030a 100%);
+            box-shadow: inset -1px 0 0 rgba(212, 175, 55, .35);
+        }
+        .pleat::after { content: ''; position: absolute; left: 0; right: 0; bottom: 0; height: 3px; background: linear-gradient(90deg, #C5A059, #FFF8DC, #C5A059); }
+        .wipe-center { position: absolute; inset: 0; display: flex; flex-direction: column; align-items: center; justify-content: center; opacity: 0; }
+        .wipe-mandala { width: 150px; height: 150px; position: relative; }
+        @media (min-width: 640px) { .wipe-mandala { width: 180px; height: 180px; } }
+        .mandala-w { width: 100%; height: 100%; overflow: visible; }
+        .mandala-w .spin { transform-origin: 100px 100px; }
+        .mandala-w .draw { stroke-dashoffset: 1; }
+        .mandala-w .dot, .mandala-w .lotus-g { opacity: 0; }
+        #sectionWipe.is-drawing .mandala-w .draw { animation: drawLine .75s cubic-bezier(.6, .1, .2, 1) forwards; animation-delay: calc(var(--d, 0s) * .45); }
+        #sectionWipe.is-drawing .mandala-w .dot { animation: fadeIn .4s ease .45s forwards; }
+        #sectionWipe.is-drawing .mandala-w .lotus-g { animation: lotusIn .8s cubic-bezier(.2, .8, .2, 1) .2s forwards; transform-origin: 100px 100px; }
+        #sectionWipe.is-drawing .mandala-w .spin { animation: spin 8s linear infinite; }
+        .wipe-title { margin-top: 22px; font-family: 'Playfair Display', serif; font-size: 30px; color: #FAF6EE; letter-spacing: .06em; display: flex; flex-wrap: wrap; justify-content: center; }
+        @media (min-width: 640px) { .wipe-title { font-size: 42px; } }
+        .wipe-title span { display: inline-block; opacity: 0; transform: translateY(14px); filter: blur(6px); white-space: pre; }
+        #sectionWipe.is-drawing .wipe-title span { animation: letterIn .55s cubic-bezier(.2, .8, .2, 1) forwards; animation-delay: calc(.2s + var(--i) * .03s); }
+        .wipe-sub { margin-top: 8px; font-family: 'Cormorant Garamond', serif; font-weight: 600; font-size: 12px; letter-spacing: .5em; color: #D4AF37; text-transform: uppercase; opacity: 0; }
+        #sectionWipe.is-drawing .wipe-sub { animation: fadeIn .5s ease .45s forwards; }
+
+        /* ============ HERO ENTRANCE ============ */
+        html.js .hero-in { opacity: 0; transform: translateY(28px); }
+        body.is-loaded .hero-in { animation: heroIn 1s cubic-bezier(.2, .7, .2, 1) forwards; animation-delay: var(--d, 0s); }
+        @keyframes heroIn { to { opacity: 1; transform: none; } }
+        .line-mask { display: block; overflow: hidden; padding-bottom: .08em; }
+        .line-mask > span { display: inline-block; }
+        html.js .line-mask > span { transform: translateY(110%); }
+        body.is-loaded .line-mask > span { animation: lineUp 1.1s cubic-bezier(.2, .8, .2, 1) forwards; animation-delay: var(--d, 0s); }
+        @keyframes lineUp { to { transform: translateY(0); } }
+        html.js .hero-img-reveal { clip-path: inset(100% 0 0 0); }
+        html.js .hero-img-reveal img { transform: scale(1.25); }
+        body.is-loaded .hero-img-reveal { animation: clipUp 1.4s cubic-bezier(.77, 0, .18, 1) .35s forwards; }
+        body.is-loaded .hero-img-reveal img { animation: heroZoomIn 2.2s cubic-bezier(.2, .7, .2, 1) .35s forwards, kenBurns 18s ease-in-out 2.6s infinite alternate; }
+        @keyframes clipUp { to { clip-path: inset(0 0 0 0); } }
+        @keyframes heroZoomIn { to { transform: scale(1); } }
+        @keyframes kenBurns { from { transform: scale(1); } to { transform: scale(1.07) translateY(-1%); } }
+        html.js .hero-frame { opacity: 0; transform: rotate(0deg) scale(.95); }
+        body.is-loaded .hero-frame { animation: frameIn 1.4s cubic-bezier(.2, .7, .2, 1) .9s forwards; }
+        @keyframes frameIn { to { opacity: 1; transform: rotate(3deg) scale(1); } }
+        .float-card { animation: floaty 6s ease-in-out infinite; }
+        @keyframes floaty { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-10px); } }
+
+        /* ============ SCROLL REVEAL ============ */
+        .reveal-element { opacity: 0; transform: translateY(30px); transition: opacity .9s ease-out, transform .9s cubic-bezier(.2, .7, .2, 1); }
+        .reveal-element.active { opacity: 1; transform: translateY(0); }
+        .reveal-element .divider-draw { width: 0; transition: width 1.1s cubic-bezier(.7, 0, .2, 1) .3s; }
+        .reveal-element.active .divider-draw { width: 6rem; }
+        .reveal-element .divider-draw > span { transform: translate(-50%, 0) rotate(45deg) scale(0); transition: transform .5s ease 1.1s; }
+        .reveal-element.active .divider-draw > span { transform: translate(-50%, 0) rotate(45deg) scale(1); }
+
+        /* ============ IMAGES / CARDS ============ */
+        .luxury-img-wrapper { overflow: hidden; position: relative; }
+        .luxury-img-wrapper img { transition: transform .9s cubic-bezier(.25, 1, .5, 1), opacity .7s ease; }
+        .luxury-img-wrapper:hover img { transform: scale(1.06); }
+        .sheen::after { content: ''; position: absolute; top: 0; bottom: 0; left: -75%; width: 50%; z-index: 5; pointer-events: none; background: linear-gradient(100deg, transparent, rgba(255, 248, 220, .28), transparent); transform: skewX(-20deg); }
+        .sheen:hover::after { animation: sheenSweep 1.1s ease; }
+        @keyframes sheenSweep { to { left: 130%; } }
+
+        .cat-tile img { transition: transform 1.1s cubic-bezier(.25, 1, .5, 1); }
+        .cat-tile:hover img { transform: scale(1.08); }
+        .cat-tile .cat-line { transform: scaleX(0); transform-origin: left; transition: transform .5s ease; }
+        .cat-tile:hover .cat-line { transform: scaleX(1); }
+
+        #productGrid { transition: opacity .28s ease, transform .28s ease; }
+        #productGrid.grid-out { opacity: 0; transform: translateY(14px); }
+        .product-card { transition: opacity .8s ease-out, transform .6s cubic-bezier(.2, .7, .2, 1), box-shadow .5s ease, border-color .5s ease; }
+        .product-card.active:hover { transform: translateY(-6px); }
+        .heart-pop { animation: heartPop .45s cubic-bezier(.2, 1.6, .4, 1); }
+        @keyframes heartPop { 0% { transform: scale(1); } 40% { transform: scale(1.45); } 100% { transform: scale(1); } }
+        .badge-bump { animation: badgeBump .5s cubic-bezier(.2, 1.6, .4, 1); }
+        @keyframes badgeBump { 0% { transform: scale(1); } 40% { transform: scale(1.6); } 100% { transform: scale(1); } }
+        .fly-dot { position: fixed; z-index: 95; width: 64px; height: 64px; border-radius: 50%; object-fit: cover; border: 2px solid #D4AF37; box-shadow: 0 0 20px rgba(212, 175, 55, .5); pointer-events: none; }
+
+        /* ============ DRAWERS / MODAL / NAV ============ */
+        #drawerBackdrop { transition: opacity .45s ease; }
+        .drawer { transition: transform .6s cubic-bezier(.77, 0, .18, 1); }
+        #quickViewModal { transition: opacity .35s ease; }
+        #quickViewModal .qv-panel { transition: transform .5s cubic-bezier(.2, .8, .2, 1), opacity .4s ease; }
+        #quickViewModal.is-closed { opacity: 0; pointer-events: none; }
+        #quickViewModal.is-closed .qv-panel { transform: translateY(24px) scale(.96); opacity: 0; }
+        #mobileNavMenu { display: grid; grid-template-rows: 0fr; transition: grid-template-rows .5s cubic-bezier(.77, 0, .18, 1); }
+        #mobileNavMenu > div { overflow: hidden; }
+        #mobileNavMenu.open { grid-template-rows: 1fr; }
+        @media (min-width: 1024px) { #mobileNavMenu { display: none; } }
+        #mobileNavMenu a { opacity: 0; transform: translateX(-12px); transition: opacity .4s ease, transform .4s ease; }
+        #mobileNavMenu.open a { opacity: 1; transform: none; }
+        #headerInner { transition: padding .4s ease; }
+        #mainHeader.is-scrolled #headerInner { padding-top: .55rem; padding-bottom: .55rem; }
+        .nav-link.is-active { color: #D4AF37; }
+        .nav-link.is-active > span { width: 100%; }
+        #scrollProgress { transform-origin: left; transform: scaleX(0); }
+        #backToTop { transition: opacity .4s ease, transform .4s ease; }
+        #backToTop.is-hidden { opacity: 0; transform: translateY(16px); pointer-events: none; }
+        @media (max-width: 640px) { #backToTop { display: none; } }   /* on phones it covered the + BAG buttons */
+        .announce-item { transition: opacity .6s ease, transform .6s ease; }
+        .announce-item.is-out { opacity: 0; transform: translateY(-8px); }
+        .marquee { display: flex; width: max-content; animation: marquee 38s linear infinite; }
+        .marquee-wrap:hover .marquee { animation-play-state: paused; }
+        @keyframes marquee { to { transform: translateX(-50%); } }
+        input[type="date"]::-webkit-calendar-picker-indicator { filter: invert(78%) sepia(40%) saturate(600%) hue-rotate(5deg); cursor: pointer; }
+
+        @media (prefers-reduced-motion: reduce) {
+            *, *::before, *::after { animation-duration: .01ms !important; animation-iteration-count: 1 !important; transition-duration: .01ms !important; }
+            .marquee { animation: none !important; }
+        }
+    </style>
+    <link rel="stylesheet" href="demo/demo.css">
+    <link rel="stylesheet" href="demo/tiers.css">
+</head>
+<body class="bg-silkVanilla text-obsidian font-montserrat antialiased selection:bg-royalMaroon selection:text-warmGold overflow-hidden">
+
+    <!-- ===================== INTRO LOADING SCREEN ===================== -->
+    <div id="introLoader" role="status" aria-label="Loading WebLuxe High Fashion Boutique">
+        <div class="curtain left"></div>
+        <div class="curtain right"></div>
+        <div class="gold-dust" id="goldDust"></div>
+        <div class="loader-content">
+            <div class="mandala-wrap">
+                <div class="mandala-glow"></div>
+                <svg class="mandala" id="loaderMandala" viewBox="0 0 200 200" aria-hidden="true"></svg>
+            </div>
+            <div class="brand-letters" id="brandLetters" aria-hidden="true"></div>
+            <div class="brand-sub">High Fashion &nbsp;•&nbsp; Boutique</div>
+            <div class="loader-progress"><i></i></div>
+            <div class="loader-tagline">Be a fashionista with WebLuxe</div>
+        </div>
+        <div class="loader-skip">Tap to enter</div>
+    </div>
+
+    <!-- SECTION TRANSITION OVERLAY -->
+    <div id="sectionWipe" aria-hidden="true">
+        <div id="pleats"></div>
+        <div class="wipe-center">
+            <div class="wipe-mandala"><svg class="mandala-w" id="wipeMandala" viewBox="0 0 200 200"></svg></div>
+            <div class="wipe-title" id="wipeTitle"></div>
+            <div class="wipe-sub">WebLuxe High Fashion Boutique</div>
+        </div>
+    </div>
+
+    <script>
+        /* Build the mandala (used by loader + transition) and loader extras before first paint */
+        function buildMandala(svg) {
+            var ns = 'http://www.w3.org/2000/svg';
+            function el(tag, attrs, parent) { var e = document.createElementNS(ns, tag); for (var k in attrs) e.setAttribute(k, attrs[k]); parent.appendChild(e); return e; }
+            var spin = el('g', { 'class': 'spin' }, svg);
+            el('circle', { 'class': 'draw', pathLength: 1, cx: 100, cy: 100, r: 96, style: '--d:.05s' }, spin);
+            el('circle', { 'class': 'draw thin', pathLength: 1, cx: 100, cy: 100, r: 90, style: '--d:.2s' }, spin);
+            for (var i = 0; i < 16; i++) {
+                el('path', { 'class': 'draw', pathLength: 1, d: 'M100 12 C 110 30, 110 46, 100 58 C 90 46, 90 30, 100 12 Z', transform: 'rotate(' + (i * 22.5) + ' 100 100)', style: '--d:' + (0.25 + i * 0.04) + 's' }, spin);
+                el('circle', { 'class': 'dot', cx: 100, cy: 7, r: 1.4, transform: 'rotate(' + (i * 22.5 + 11.25) + ' 100 100)', style: '--d:' + (1.1 + i * 0.03) + 's' }, spin);
+            }
+            for (var j = 0; j < 8; j++) {
+                el('path', { 'class': 'draw thin', pathLength: 1, d: 'M100 44 C 116 54, 118 68, 100 82 C 82 68, 84 54, 100 44 Z', transform: 'rotate(' + (j * 45 + 22.5) + ' 100 100)', style: '--d:' + (0.55 + j * 0.05) + 's' }, spin);
+            }
+            el('circle', { 'class': 'draw thin', pathLength: 1, cx: 100, cy: 100, r: 44, style: '--d:.5s' }, spin);
+            el('circle', { 'class': 'draw', pathLength: 1, cx: 100, cy: 100, r: 40, style: '--d:.6s' }, spin);
+            /* Lotus in the centre */
+            var lotus = el('g', { 'class': 'lotus-g' }, svg);
+            var inner = el('g', { transform: 'translate(100 100) scale(.58) translate(-100 -102)' }, lotus);
+            var petals = [
+                'M100 66 C 112 82, 112 104, 100 122 C 88 104, 88 82, 100 66 Z',
+                'M100 122 C 84 114, 74 98, 76 82 C 90 88, 99 104, 100 122 Z',
+                'M100 122 C 116 114, 126 98, 124 82 C 110 88, 101 104, 100 122 Z',
+                'M100 122 C 80 124, 64 114, 58 100 C 74 100, 90 108, 100 122 Z',
+                'M100 122 C 120 124, 136 114, 142 100 C 126 100, 110 108, 100 122 Z',
+                'M70 130 Q 100 142 130 130'
+            ];
+            petals.forEach(function (d, k) { el('path', { 'class': 'draw lotus', pathLength: 1, d: d, style: '--d:' + (0.7 + k * 0.08) + 's' }, inner); });
+        }
+        (function () {
+            buildMandala(document.getElementById('loaderMandala'));
+            buildMandala(document.getElementById('wipeMandala'));
+            var word = 'WEBLUXE', box = document.getElementById('brandLetters');
+            for (var k = 0; k < word.length; k++) { var s = document.createElement('span'); s.textContent = word[k]; s.style.setProperty('--i', k); box.appendChild(s); }
+            var dust = document.getElementById('goldDust');
+            for (var n = 0; n < 26; n++) {
+                var b = document.createElement('b');
+                b.style.left = (Math.random() * 100) + '%';
+                b.style.setProperty('--s', (1 + Math.random() * 3) + 'px');
+                b.style.setProperty('--t', (6 + Math.random() * 7) + 's');
+                b.style.setProperty('--d', (Math.random() * 5) + 's');
+                b.style.setProperty('--x', ((Math.random() - 0.5) * 120) + 'px');
+                dust.appendChild(b);
+            }
+            var pleats = document.getElementById('pleats'), P = 7;
+            for (var p = 0; p < P; p++) {
+                var d = document.createElement('div');
+                d.className = 'pleat';
+                d.style.left = (p * 100 / P) + '%';
+                d.style.width = 'calc(' + (100 / P) + '% + 1px)';
+                pleats.appendChild(d);
+            }
+            try { if (sessionStorage.getItem('hf_intro_seen')) document.getElementById('introLoader').classList.add('fast'); } catch (e) {}
+        })();
+    </script>
+
+    <!-- SCROLL PROGRESS -->
+    <div id="scrollProgress" class="fixed top-0 left-0 right-0 h-[2px] z-[60] bg-gradient-to-r from-antiqueGold via-softGold to-warmGold pointer-events-none"></div>
+
+    <!-- TOP ANNOUNCEMENT BAR -->
+    <div class="bg-richBurgundy text-warmGold border-b border-warmGold/20 py-2 px-4 text-center font-montserrat text-[11px] tracking-widest uppercase flex justify-between items-center z-50 relative">
+        <div class="hidden md:flex items-center gap-2 text-creamAccent/80">
+            <i class="fa-solid fa-location-dot text-warmGold"></i>
+            <span>Rose Hill &amp; Grand Baie</span>
+        </div>
+        <div class="mx-auto md:mx-0 flex items-center gap-2 min-h-[16px]">
+            <span class="w-1.5 h-1.5 rounded-full bg-warmGold animate-pulse shrink-0"></span>
+            <span id="announceText" class="announce-item">Bridal &amp; Non-Bridal Specialist • Men's Ethnic Wear • Party Wear</span>
+        </div>
+        <div class="hidden md:flex items-center gap-4 text-creamAccent/80">
+            <a href="#" onclick="openWhatsApp('Hello WebLuxe High Fashion Boutique!'); return false;" class="hover:text-warmGold transition-colors"><i class="fa-brands fa-whatsapp mr-1"></i> WhatsApp us</a>
+            <span>|</span>
+            <span class="font-semibold text-warmGold">MUR (Rs)</span>
+        </div>
+    </div>
+
+    <!-- HEADER -->
+    <header id="mainHeader" class="sticky top-0 z-40 bg-royalMaroon/95 border-b border-warmGold/30 transition-all duration-300 shadow-xl backdrop-blur-md">
+        <div id="headerInner" class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 flex items-center justify-between">
+            <div class="flex items-center gap-4 lg:hidden">
+                <button id="mobileNavBtn" onclick="toggleMobileNav()" class="text-warmGold p-2 text-xl focus:outline-none" aria-label="Open menu" aria-expanded="false">
+                    <i class="fa-solid fa-bars-staggered"></i>
+                </button>
+            </div>
+
+            <nav class="hidden lg:flex items-center gap-7 text-xs font-montserrat uppercase tracking-[0.2em] text-silkVanilla/90 font-medium">
+                <a href="#hero" data-nav="hero" class="nav-link hover:text-warmGold transition-colors py-1 relative group">Home<span class="absolute bottom-0 left-0 w-0 h-[1px] bg-warmGold transition-all duration-300 group-hover:w-full"></span></a>
+                <a href="#collections" data-nav="collections" class="nav-link hover:text-warmGold transition-colors py-1 relative group">Collection<span class="absolute bottom-0 left-0 w-0 h-[1px] bg-warmGold transition-all duration-300 group-hover:w-full"></span></a>
+                <a href="#bride-groom" data-nav="bride-groom" class="nav-link hover:text-warmGold transition-colors py-1 relative group">Bride &amp; Groom<span class="absolute bottom-0 left-0 w-0 h-[1px] bg-warmGold transition-all duration-300 group-hover:w-full"></span></a>
+                <a href="#visit" data-nav="visit" class="nav-link hover:text-warmGold transition-colors py-1 relative group">Visit Us<span class="absolute bottom-0 left-0 w-0 h-[1px] bg-warmGold transition-all duration-300 group-hover:w-full"></span></a>
+            </nav>
+
+            <a href="#hero" class="text-center group flex flex-col items-center" aria-label="WebLuxe High Fashion Boutique home">
+                <span class="font-playfair text-xl sm:text-3xl font-bold tracking-[0.2em] sm:tracking-[0.22em] text-gold-gradient uppercase drop-shadow-md">WEBLUXE</span>
+                <span class="font-cormorant text-[9px] sm:text-xs tracking-[0.3em] sm:tracking-[0.45em] text-warmGold uppercase -mt-1 font-semibold whitespace-nowrap group-hover:tracking-[0.55em] transition-all">High Fashion<span class="hidden sm:inline"> • Boutique</span></span>
+            </a>
+
+            <div class="flex items-center gap-5">
+                <button onclick="toggleWishlistDrawer()" class="relative text-silkVanilla hover:text-warmGold transition-colors p-1" title="Wishlist" aria-label="Wishlist">
+                    <i class="fa-regular fa-heart text-xl"></i>
+                    <span id="wishlistBadge" class="absolute -top-1.5 -right-2 bg-warmGold text-richBurgundy text-[9px] font-bold w-4 h-4 rounded-full flex items-center justify-center border border-royalMaroon">0</span>
+                </button>
+                <button id="bagBtn" onclick="toggleCartDrawer()" class="relative flex items-center gap-2 bg-richBurgundy border border-warmGold/40 hover:border-warmGold text-warmGold px-3.5 py-2 rounded-sm transition-all duration-300 group shadow-gold-sm" aria-label="Shopping bag">
+                    <i class="fa-solid fa-bag-shopping text-base group-hover:scale-110 transition-transform"></i>
+                    <span class="hidden sm:inline font-montserrat text-xs tracking-widest uppercase font-semibold">BAG</span>
+                    <span id="cartBadge" class="bg-warmGold text-richBurgundy text-[10px] font-bold px-1.5 rounded-full font-montserrat">0</span>
+                </button>
+            </div>
+        </div>
+
+        <div id="mobileNavMenu" class="lg:hidden bg-richBurgundy">
+            <div>
+                <div class="border-b border-warmGold/30 px-6 py-6 font-montserrat text-xs tracking-widest uppercase flex flex-col gap-4 text-silkVanilla">
+                    <a href="#hero" onclick="toggleMobileNav(false)" class="py-2 border-b border-warmGold/10 hover:text-warmGold">Home</a>
+                    <a href="#collections" onclick="toggleMobileNav(false)" class="py-2 border-b border-warmGold/10 hover:text-warmGold">Collection</a>
+                    <a href="#bride-groom" onclick="toggleMobileNav(false)" class="py-2 border-b border-warmGold/10 hover:text-warmGold">Bride &amp; Groom</a>
+                    <a href="#visit" onclick="toggleMobileNav(false)" class="py-2 border-b border-warmGold/10 hover:text-warmGold">Visit Our Boutiques</a>
+                    <div class="pt-2 text-[11px] text-warmGold/80 normal-case flex flex-col gap-1">
+                        <span><i class="fa-solid fa-location-dot mr-1"></i> Royal Road, Rose Hill &amp; Coastal Road, Grand Baie</span>
+                        <span><i class="fa-brands fa-whatsapp mr-1"></i> WhatsApp: <span class="ph-num">Your phone number</span></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- HERO -->
+    <section id="hero" class="relative bg-richBurgundy text-silkVanilla min-h-[85vh] lg:min-h-[90vh] flex items-center overflow-hidden">
+        <div class="absolute -top-40 -left-40 w-[520px] h-[520px] rounded-full bg-deepCrimson/60 blur-3xl pointer-events-none"></div>
+        <div class="absolute -bottom-48 right-0 w-[560px] h-[560px] rounded-full bg-warmGold/10 blur-3xl pointer-events-none"></div>
+        <div class="dot-field"></div>
+        <svg class="hero-mandala" id="heroMandala" viewBox="0 0 200 200" aria-hidden="true"></svg>
+        <div class="hero-dust" id="heroDust" aria-hidden="true"></div>
+
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 w-full relative z-10 grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+            <div class="lg:col-span-6 space-y-6 text-center lg:text-left">
+                <div class="hero-in inline-flex items-center gap-2 px-3 py-1 border border-warmGold/40 bg-royalMaroon/60 rounded-full text-warmGold font-montserrat text-[10px] sm:text-xs tracking-[0.25em] uppercase" style="--d:.15s">
+                    <i class="fa-solid fa-gem text-[10px]"></i>
+                    <span>Bridal &amp; Non-Bridal Specialist</span>
+                </div>
+
+                <h1 class="font-playfair text-4xl sm:text-6xl xl:text-7xl font-semibold leading-[1.12] text-silkVanilla">
+                    <span class="line-mask"><span style="--d:.25s">Be a fashionista</span></span>
+                    <span class="line-mask"><span class="italic font-cormorant font-normal text-gold-gradient pr-2" style="--d:.4s">with WebLuxe</span></span>
+                </h1>
+
+                <p class="hero-in font-cormorant text-lg sm:text-2xl text-creamAccent/90 leading-relaxed max-w-xl mx-auto lg:mx-0 font-light" style="--d:.6s">
+                    A panoply of exquisite, latest Indian wear with the perfect blend of glamour — bridal lehengas, sarees, gowns, sherwanis and men's ethnic wear.
+                </p>
+
+                <div class="hero-in pt-4 flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4 font-montserrat text-xs tracking-[0.2em] uppercase font-semibold" style="--d:.75s">
+                    <a href="#collections" class="gold-shimmer w-full sm:w-auto text-center px-8 py-4 text-richBurgundy rounded-sm transition-all duration-300 shadow-gold-glow hover:shadow-[0_0_35px_rgba(212,175,55,.5)] flex items-center justify-center gap-3 group">
+                        <span>Shop the Collection</span>
+                        <i class="fa-solid fa-arrow-right-long group-hover:translate-x-1.5 transition-transform"></i>
+                    </a>
+                    <a href="#visit" class="w-full sm:w-auto text-center px-8 py-4 bg-transparent hover:bg-royalMaroon border border-warmGold/60 text-warmGold rounded-sm transition-all duration-300 flex items-center justify-center gap-2">
+                        <i class="fa-solid fa-location-dot text-xs"></i>
+                        <span>Visit a Boutique</span>
+                    </a>
+                </div>
+
+                <div class="hero-in pt-8 border-t border-warmGold/20 grid grid-cols-3 gap-4 text-center lg:text-left font-montserrat text-[10px] sm:text-[11px] text-warmGold/90 uppercase tracking-widest" style="--d:.9s">
+                    <div><span class="block font-playfair text-xl sm:text-2xl text-silkVanilla">12K+</span><span>Facebook Family</span></div>
+                    <div><span class="block font-playfair text-xl sm:text-2xl text-silkVanilla">96%</span><span>Recommend Us</span></div>
+                    <div><span class="block font-playfair text-xl sm:text-2xl text-silkVanilla">2</span><span>Boutiques</span></div>
+                </div>
+            </div>
+
+            <div class="lg:col-span-6 relative flex justify-center items-center">
+                <div class="hero-frame absolute inset-0 max-w-md mx-auto border-2 border-warmGold/30 rounded-sm pointer-events-none hidden sm:block"></div>
+                <div class="hero-in relative w-full max-w-md bg-royalMaroon p-3 filigree-border rounded-sm shadow-2xl" style="--d:.2s">
+                    <div class="hero-img-reveal relative h-[420px] sm:h-[520px] rounded-sm overflow-hidden bg-charcoal">
+                        <img id="heroImage" src="https://images.unsplash.com/photo-1721324807083-e9ddaa99310e?auto=format&fit=crop&w=1000&q=80" srcset="https://images.unsplash.com/photo-1721324807083-e9ddaa99310e?auto=format&fit=crop&w=500&q=75 500w, https://images.unsplash.com/photo-1721324807083-e9ddaa99310e?auto=format&fit=crop&w=750&q=75 750w, https://images.unsplash.com/photo-1721324807083-e9ddaa99310e?auto=format&fit=crop&w=1000&q=80 1000w" sizes="(max-width:1024px) 80vw, 40vw" alt="Bridal lehenga at WebLuxe High Fashion Boutique" class="w-full h-full object-cover object-top" fetchpriority="high">
+                        <div class="absolute bottom-4 left-4 right-4 bg-richBurgundy/90 border border-warmGold/40 p-4 backdrop-blur-md flex items-center justify-between text-silkVanilla cursor-pointer hover:border-warmGold transition-colors" onclick="goToCategory('bridal')">
+                            <div>
+                                <span class="font-cormorant text-xs text-warmGold uppercase tracking-widest block">New Arrivals</span>
+                                <span class="font-playfair text-lg font-semibold block text-silkVanilla">Bridal Lehengas</span>
+                            </div>
+                            <span class="w-9 h-9 rounded-full border border-warmGold/60 flex items-center justify-center text-warmGold"><i class="fa-solid fa-arrow-right text-xs"></i></span>
+                        </div>
+                    </div>
+                </div>
+                <!-- Floating groom card -->
+                <div class="hero-in hidden md:block absolute -left-2 lg:-left-8 top-10 w-36" style="--d:1.1s">
+                    <div class="float-card bg-royalMaroon p-1.5 filigree-border shadow-2xl cursor-pointer" onclick="goToCategory('groom')">
+                        <img src="https://images.unsplash.com/photo-1760080838961-4208536db385?auto=format&fit=crop&w=400&q=80" alt="Groom sherwani" class="w-full h-44 object-cover object-top">
+                        <span class="block text-center font-cormorant text-[11px] text-warmGold tracking-widest uppercase pt-1.5">For the Groom</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <a href="#categories" class="absolute bottom-6 left-1/2 -translate-x-1/2 hidden lg:block text-warmGold/70 hover:text-warmGold font-montserrat text-[9px] tracking-[0.35em] uppercase z-10" aria-label="Scroll down">
+            <span class="hero-in flex flex-col items-center gap-2" style="--d:1.2s"><span>Scroll</span><span class="w-px h-10 bg-gradient-to-b from-warmGold to-transparent animate-pulse"></span></span>
+        </a>
+    </section>
+
+    <!-- GOLD MARQUEE -->
+    <div class="marquee-wrap bg-gradient-to-r from-antiqueGold via-warmGold to-antiqueGold text-richBurgundy overflow-hidden py-3 border-y border-richBurgundy/20" aria-hidden="true">
+        <div class="marquee font-cormorant italic font-semibold text-lg sm:text-xl whitespace-nowrap" id="marquee"></div>
+    </div>
+
+    <!-- SHOP BY CATEGORY -->
+    <section id="categories" class="on-light py-20 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
+        <div class="text-center space-y-3 mb-12 reveal-element">
+            <span class="font-cormorant text-base sm:text-lg text-royalMaroon font-bold tracking-[0.3em] uppercase block">— Everything Indian, Under One Roof —</span>
+            <h2 class="font-playfair text-3xl sm:text-5xl font-bold text-richBurgundy">Shop by Category</h2>
+            <div class="divider-draw h-[2px] bg-warmGold mx-auto my-4 relative"><span class="absolute -top-1.5 left-1/2 w-3 h-3 bg-warmGold"></span></div>
+        </div>
+        <div id="categoryTiles" class="grid grid-cols-2 md:grid-cols-3 gap-4 sm:gap-6"></div>
+    </section>
+
+    <!-- CATEGORY CHIPS -->
+    <section class="relative overflow-hidden bg-royalMaroon border-y border-warmGold/30 py-6 px-4" id="chipBar">
+        <div class="dot-field soft"></div>
+        <div id="categoryChips" class="relative max-w-7xl mx-auto flex items-center justify-start lg:justify-center gap-3 overflow-x-auto no-scrollbar pb-1 font-montserrat text-xs tracking-[0.15em] uppercase"></div>
+    </section>
+
+    <!-- COLLECTION -->
+    <section id="collections" class="on-light py-16 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
+        <div class="text-center space-y-3 mb-12 reveal-element">
+            <span class="font-cormorant text-base sm:text-lg text-royalMaroon font-bold tracking-[0.3em] uppercase block">— The WebLuxe Collection —</span>
+            <h2 class="font-playfair text-3xl sm:text-5xl font-bold text-richBurgundy">Latest in Store</h2>
+            <div class="divider-draw h-[2px] bg-warmGold mx-auto my-4 relative"><span class="absolute -top-1.5 left-1/2 w-3 h-3 bg-warmGold"></span></div>
+            <p class="font-cormorant text-cocoa text-lg sm:text-xl max-w-2xl mx-auto">Limited pieces — new arrivals every week. Ask us on WhatsApp for sizes and colours.</p>
+        </div>
+
+        <div class="flex flex-wrap items-center justify-between gap-4 mb-10 pb-4 border-b border-royalMaroon/10 font-montserrat text-xs">
+            <div class="relative flex-1 min-w-[200px] max-w-sm">
+                <i class="fa-solid fa-magnifying-glass absolute left-3 top-1/2 -translate-y-1/2 text-royalMaroon/50"></i>
+                <label for="searchInput" class="sr-only">Search</label>
+                <input id="searchInput" type="search" placeholder="Search lehenga, saree, sherwani…" oninput="onSearch()" class="w-full bg-creamAccent border border-royalMaroon/20 text-richBurgundy pl-9 pr-3 py-2 rounded-sm focus:outline-none focus:border-warmGold font-semibold placeholder-royalMaroon/40">
+            </div>
+            <div class="flex items-center gap-4">
+                <label for="sortSelect" class="sr-only">Sort</label>
+                <select id="sortSelect" onchange="applyFilters()" class="bg-creamAccent border border-royalMaroon/20 text-richBurgundy px-3 py-2 rounded-sm focus:outline-none focus:border-warmGold font-semibold cursor-pointer">
+                    <option value="featured">Sort: Featured</option>
+                    <option value="low">Price: Low to High</option>
+                    <option value="high">Price: High to Low</option>
+                </select>
+                <div class="text-cocoaSoft text-xs whitespace-nowrap"><span id="productCount" class="font-bold text-richBurgundy">0</span> pieces</div>
+            </div>
+        </div>
+
+        <div id="productGrid" class="grid grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-8"></div>
+
+        <div class="text-center mt-12">
+            <button id="showMoreBtn" onclick="showMore()" class="px-10 py-3.5 border border-royalMaroon text-royalMaroon hover:bg-royalMaroon hover:text-warmGold font-montserrat text-xs font-bold tracking-[0.2em] uppercase rounded-sm transition-all duration-300">
+                Show More <i class="fa-solid fa-chevron-down ml-2 text-[10px]"></i>
+            </button>
+        </div>
+    </section>
+
+    <!-- BRIDE & GROOM -->
+    <section id="bride-groom" class="bg-richBurgundy text-silkVanilla py-20 px-4 sm:px-6 lg:px-8 border-y border-warmGold/30 relative overflow-hidden">
+        <div class="dot-field"></div>
+        <div class="max-w-7xl mx-auto relative">
+            <div class="text-center space-y-3 mb-14 reveal-element">
+                <span class="font-cormorant text-warmGold tracking-[0.3em] uppercase text-sm block font-bold">[ Wedding Season ]</span>
+                <h2 class="font-playfair text-3xl sm:text-5xl font-bold text-silkVanilla">Dressed for Your Big Day</h2>
+                <p class="font-cormorant text-creamAccent/80 text-lg max-w-2xl mx-auto">From the bride's lehenga to the groom's complete sherwani — and the whole family in between.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6 lg:gap-10">
+                <div class="reveal-element group cursor-pointer" onclick="goToCategory('bridal')">
+                    <div class="relative filigree-border p-3 bg-royalMaroon rounded-sm shadow-2xl">
+                        <div class="luxury-img-wrapper sheen h-[440px] sm:h-[540px] rounded-sm relative bg-charcoal">
+                            <img src="https://images.unsplash.com/photo-1740674570259-a47d713a2976?auto=format&fit=crop&w=1000&q=80" alt="Bride in lehenga" class="w-full h-full object-cover object-top" loading="lazy">
+                            <div class="absolute inset-0 bg-gradient-to-t from-richBurgundy via-richBurgundy/10 to-transparent"></div>
+                            <div class="absolute bottom-6 left-6 right-6">
+                                <span class="text-warmGold font-cormorant text-xs tracking-widest uppercase block">For the Bride</span>
+                                <h3 class="font-playfair text-3xl font-bold">Bridal Lehengas</h3>
+                                <span class="inline-flex items-center gap-2 mt-3 text-warmGold font-montserrat text-[11px] font-bold tracking-[0.2em] uppercase">Explore <i class="fa-solid fa-arrow-right-long group-hover:translate-x-2 transition-transform"></i></span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="reveal-element group cursor-pointer md:mt-16" style="transition-delay:.15s" onclick="goToCategory('groom')">
+                    <div class="relative filigree-border p-3 bg-royalMaroon rounded-sm shadow-2xl">
+                        <div class="luxury-img-wrapper sheen h-[440px] sm:h-[540px] rounded-sm relative bg-charcoal">
+                            <img src="https://images.unsplash.com/photo-1759906766080-82b785c61f51?auto=format&fit=crop&w=1000&q=80" alt="Groom in sherwani" class="w-full h-full object-cover object-top" loading="lazy">
+                            <div class="absolute inset-0 bg-gradient-to-t from-richBurgundy via-richBurgundy/10 to-transparent"></div>
+                            <div class="absolute bottom-6 left-6 right-6">
+                                <span class="text-warmGold font-cormorant text-xs tracking-widest uppercase block">For the Groom</span>
+                                <h3 class="font-playfair text-3xl font-bold">Complete Sherwanis</h3>
+                                <span class="inline-flex items-center gap-2 mt-3 text-warmGold font-montserrat text-[11px] font-bold tracking-[0.2em] uppercase">Explore <i class="fa-solid fa-arrow-right-long group-hover:translate-x-2 transition-transform"></i></span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- EXPERIENCE QUOTE -->
+    <section class="relative py-24 px-4 overflow-hidden">
+        <img src="https://images.unsplash.com/photo-1735052712489-f45220126a0c?auto=format&fit=crop&w=1600&q=70" alt="" aria-hidden="true" class="absolute inset-0 w-full h-full object-cover" loading="lazy">
+        <div class="absolute inset-0 bg-gradient-to-b from-richBurgundy/90 via-richBurgundy/80 to-richBurgundy/90"></div>
+        <div class="dot-field soft"></div>
+        <div class="relative max-w-3xl mx-auto text-center reveal-element">
+            <i class="fa-solid fa-quote-left text-warmGold/60 text-3xl"></i>
+            <p class="font-playfair italic text-2xl sm:text-4xl text-silkVanilla leading-snug mt-4">We don't just sell fashion, we create an experience. From the moment you step in, it's all about you.</p>
+            <span class="block mt-6 font-montserrat text-[11px] tracking-[0.35em] uppercase text-warmGold">— WebLuxe High Fashion Boutique</span>
+        </div>
+    </section>
+
+    <!-- HOW IT WORKS -->
+    <section class="on-light relative overflow-hidden bg-creamAccent border-b border-warmGold/30 py-20 px-4 sm:px-6 lg:px-8">
+        <div class="dot-field on-light"></div>
+        <div class="relative max-w-6xl mx-auto">
+            <div class="text-center space-y-3 mb-20 reveal-element">
+                <span class="font-cormorant text-base sm:text-lg text-royalMaroon font-bold tracking-[0.3em] uppercase block">— Simple &amp; Personal —</span>
+                <h2 class="font-playfair text-3xl sm:text-5xl font-bold text-richBurgundy">How to Shop With Us</h2>
+                <div class="divider-draw h-[2px] bg-warmGold mx-auto my-4 relative"><span class="absolute -top-1.5 left-1/2 w-3 h-3 bg-warmGold"></span></div>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6 lg:gap-10 relative">
+                <div class="hidden md:block absolute top-0 left-[16%] right-[16%] h-px bg-gradient-to-r from-transparent via-warmGold/60 to-transparent"></div>
+                <div class="reveal-element step-card relative text-center bg-silkVanilla border border-warmGold/30 rounded-sm px-6 pt-14 pb-8 shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all duration-500">
+                    <span class="absolute top-0 left-1/2 -translate-x-1/2 -translate-y-1/2 w-20 h-20 rounded-full bg-royalMaroon border-2 border-warmGold text-warmGold flex items-center justify-center text-2xl shadow-gold-glow"><i class="fa-regular fa-heart"></i></span>
+                    <span class="font-montserrat text-[10px] font-bold tracking-[0.3em] uppercase text-deepGold">Step 1</span>
+                    <h3 class="font-playfair text-xl font-bold text-richBurgundy mt-1">Browse &amp; Save</h3>
+                    <p class="font-cormorant text-cocoa text-lg mt-2 leading-snug">Explore the collection online and save the pieces you love to your wishlist or bag.</p>
+                </div>
+                <div class="reveal-element step-card relative text-center bg-silkVanilla border border-warmGold/30 rounded-sm px-6 pt-14 pb-8 shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all duration-500 mt-8 md:mt-0" style="transition-delay:.12s">
+                    <span class="absolute top-0 left-1/2 -translate-x-1/2 -translate-y-1/2 w-20 h-20 rounded-full bg-royalMaroon border-2 border-warmGold text-warmGold flex items-center justify-center text-2xl shadow-gold-glow"><i class="fa-brands fa-whatsapp"></i></span>
+                    <span class="font-montserrat text-[10px] font-bold tracking-[0.3em] uppercase text-deepGold">Step 2</span>
+                    <h3 class="font-playfair text-xl font-bold text-richBurgundy mt-1">Message on WhatsApp</h3>
+                    <p class="font-cormorant text-cocoa text-lg mt-2 leading-snug">Send your bag or question in one tap — we'll confirm sizes, colours and availability.</p>
+                </div>
+                <div class="reveal-element step-card relative text-center bg-silkVanilla border border-warmGold/30 rounded-sm px-6 pt-14 pb-8 shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all duration-500 mt-8 md:mt-0" style="transition-delay:.24s">
+                    <span class="absolute top-0 left-1/2 -translate-x-1/2 -translate-y-1/2 w-20 h-20 rounded-full bg-royalMaroon border-2 border-warmGold text-warmGold flex items-center justify-center text-2xl shadow-gold-glow"><i class="fa-solid fa-store"></i></span>
+                    <span class="font-montserrat text-[10px] font-bold tracking-[0.3em] uppercase text-deepGold">Step 3</span>
+                    <h3 class="font-playfair text-xl font-bold text-richBurgundy mt-1">Try On in Boutique</h3>
+                    <p class="font-cormorant text-cocoa text-lg mt-2 leading-snug">Visit Rose Hill or Grand Baie to try on, get alterations and take it home.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- VISIT US -->
+    <section id="visit" class="on-light py-20 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
+        <div class="text-center space-y-3 mb-12 reveal-element">
+            <span class="font-cormorant text-base sm:text-lg text-royalMaroon font-bold tracking-[0.3em] uppercase block">— Come Say Hello —</span>
+            <h2 class="font-playfair text-3xl sm:text-5xl font-bold text-richBurgundy">Visit Our Boutiques</h2>
+            <div class="divider-draw h-[2px] bg-warmGold mx-auto my-4 relative"><span class="absolute -top-1.5 left-1/2 w-3 h-3 bg-warmGold"></span></div>
+        </div>
+
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
+            <div class="lg:col-span-6 space-y-6">
+                <div class="reveal-element bg-creamAccent border border-warmGold/40 rounded-sm p-7 shadow-lg hover:shadow-2xl transition-shadow">
+                    <span class="font-montserrat text-[10px] font-bold tracking-[0.25em] uppercase text-warmGold bg-royalMaroon px-2 py-1 rounded-xs">Boutique 1</span>
+                    <h3 class="font-playfair text-2xl font-bold text-richBurgundy mt-3">Royal Road, Rose Hill</h3>
+                    <p class="font-cormorant text-cocoa text-lg">Opposite the bus station</p>
+                    <a href="https://www.google.com/maps/search/?api=1&query=Rose+Hill+Mauritius" target="_blank" rel="noopener" class="inline-flex items-center gap-2 mt-4 font-montserrat text-[11px] font-bold tracking-[0.2em] uppercase text-royalMaroon hover:text-deepGold transition-colors"><i class="fa-solid fa-diamond-turn-right"></i> Get Directions</a>
+                </div>
+                <div class="reveal-element bg-creamAccent border border-warmGold/40 rounded-sm p-7 shadow-lg hover:shadow-2xl transition-shadow" style="transition-delay:.1s">
+                    <span class="font-montserrat text-[10px] font-bold tracking-[0.25em] uppercase text-richBurgundy bg-warmGold px-2 py-1 rounded-xs">Boutique 2 • Now Open</span>
+                    <h3 class="font-playfair text-2xl font-bold text-richBurgundy mt-3">Coastal Road, Grand Baie</h3>
+                    <p class="font-cormorant text-cocoa text-lg">A short walk from the beach</p>
+                    <a href="https://www.google.com/maps/search/?api=1&query=Grand+Baie+Mauritius" target="_blank" rel="noopener" class="inline-flex items-center gap-2 mt-4 font-montserrat text-[11px] font-bold tracking-[0.2em] uppercase text-royalMaroon hover:text-deepGold transition-colors"><i class="fa-solid fa-diamond-turn-right"></i> Get Directions</a>
+                </div>
+                <div class="reveal-element flex flex-wrap gap-x-8 gap-y-3 font-montserrat text-sm text-richBurgundy" style="transition-delay:.2s">
+                    <a href="tel:" class="hover:text-deepGold transition-colors"><i class="fa-solid fa-phone text-deepGold mr-2"></i><span class="ph-num">Your phone number</span></a>
+                </div>
+                <p class="reveal-element font-cormorant text-cocoaSoft text-lg"><i class="fa-brands fa-whatsapp text-emerald-700 mr-1"></i> Queries via WhatsApp only — <strong class="text-richBurgundy"><span class="ph-num">Your phone number</span></strong></p>
+            </div>
+
+            <div class="lg:col-span-6 reveal-element bg-richBurgundy text-silkVanilla p-8 rounded-sm filigree-border shadow-2xl space-y-4" style="transition-delay:.15s">
+                <h3 class="font-playfair text-2xl font-bold text-warmGold text-center border-b border-warmGold/20 pb-3">Plan Your Visit</h3>
+                <form id="appointmentForm" onsubmit="handleAppointmentSubmit(event)" class="space-y-4 font-montserrat text-xs">
+                    <div>
+                        <label for="apName" class="block text-warmGold uppercase tracking-widest text-[10px] mb-1">Your Name</label>
+                        <input id="apName" name="name" type="text" required placeholder="Your full name" class="w-full bg-royalMaroon border border-warmGold/30 rounded-sm p-3 text-white placeholder-creamAccent/40 focus:outline-none focus:border-warmGold transition-colors">
+                    </div>
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                        <div>
+                            <label for="apBoutique" class="block text-warmGold uppercase tracking-widest text-[10px] mb-1">Boutique</label>
+                            <select id="apBoutique" name="boutique" class="w-full bg-royalMaroon border border-warmGold/30 rounded-sm p-3 text-white focus:outline-none focus:border-warmGold">
+                                <option>Royal Road, Rose Hill</option>
+                                <option>Coastal Road, Grand Baie</option>
+                            </select>
+                        </div>
+                        <div>
+                            <label for="apDate" class="block text-warmGold uppercase tracking-widest text-[10px] mb-1">Preferred Date</label>
+                            <input id="apDate" name="date" type="date" required class="w-full bg-royalMaroon border border-warmGold/30 rounded-sm p-3 text-white focus:outline-none focus:border-warmGold">
+                        </div>
+                    </div>
+                    <div>
+                        <label for="apAttire" class="block text-warmGold uppercase tracking-widest text-[10px] mb-1">Looking For</label>
+                        <select id="apAttire" name="attire" class="w-full bg-royalMaroon border border-warmGold/30 rounded-sm p-3 text-white focus:outline-none focus:border-warmGold">
+                            <option>Bridal lehenga</option>
+                            <option>Groom sherwani</option>
+                            <option>Party lehenga / gown</option>
+                            <option>Saree</option>
+                            <option>Men's kurta / indo-western</option>
+                            <option>Outfits for the whole family</option>
+                        </select>
+                    </div>
+                    <button type="submit" class="w-full py-4 bg-warmGold hover:bg-softGold text-richBurgundy font-bold text-xs uppercase tracking-[0.2em] rounded-sm transition-all shadow-gold-glow mt-2">
+                        Send on WhatsApp <i class="fa-brands fa-whatsapp ml-2 text-sm"></i>
+                    </button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- SOCIAL -->
+    <section class="on-light relative overflow-hidden bg-creamAccent border-t border-warmGold/30 py-14 px-4">
+        <div class="dot-field on-light"></div>
+        <div class="relative max-w-5xl mx-auto text-center reveal-element">
+            <h3 class="font-playfair text-2xl sm:text-3xl font-bold text-richBurgundy">See new arrivals first</h3>
+            <p class="font-cormorant text-cocoa text-lg mt-1">Daily videos, try-ons and offers on our socials.</p>
+            <div class="grid grid-cols-1 sm:grid-cols-3 gap-4 mt-8 font-montserrat">
+                <a href="https://www.facebook.com/" target="_blank" rel="noopener" class="group bg-silkVanilla border border-warmGold/30 hover:border-warmGold p-5 rounded-sm flex items-center gap-4 transition-all hover:-translate-y-1 hover:shadow-xl">
+                    <span class="w-12 h-12 rounded-full bg-royalMaroon text-warmGold flex items-center justify-center text-xl group-hover:scale-110 transition-transform"><i class="fa-brands fa-facebook-f"></i></span>
+                    <span class="text-left"><b class="block font-playfair text-xl text-richBurgundy">12K+</b><span class="text-[11px] tracking-widest uppercase text-cocoaSoft">Facebook</span></span>
+                </a>
+                <a href="https://www.instagram.com/" target="_blank" rel="noopener" class="group bg-silkVanilla border border-warmGold/30 hover:border-warmGold p-5 rounded-sm flex items-center gap-4 transition-all hover:-translate-y-1 hover:shadow-xl">
+                    <span class="w-12 h-12 rounded-full bg-royalMaroon text-warmGold flex items-center justify-center text-xl group-hover:scale-110 transition-transform"><i class="fa-brands fa-instagram"></i></span>
+                    <span class="text-left"><b class="block font-playfair text-xl text-richBurgundy">6K</b><span class="text-[11px] tracking-widest uppercase text-cocoaSoft">Instagram</span></span>
+                </a>
+                <a href="https://www.tiktok.com/" target="_blank" rel="noopener" class="group bg-silkVanilla border border-warmGold/30 hover:border-warmGold p-5 rounded-sm flex items-center gap-4 transition-all hover:-translate-y-1 hover:shadow-xl">
+                    <span class="w-12 h-12 rounded-full bg-royalMaroon text-warmGold flex items-center justify-center text-xl group-hover:scale-110 transition-transform"><i class="fa-brands fa-tiktok"></i></span>
+                    <span class="text-left"><b class="block font-playfair text-xl text-richBurgundy">8K+</b><span class="text-[11px] tracking-widest uppercase text-cocoaSoft">TikTok</span></span>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="relative overflow-hidden bg-richBurgundy text-silkVanilla border-t border-warmGold/30 pt-16 pb-12 px-4 sm:px-6 lg:px-8 font-montserrat text-xs">
+        <div class="dot-field soft"></div>
+        <div class="relative max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 pb-12 border-b border-warmGold/20">
+            <div class="space-y-4">
+                <a href="#hero" class="inline-block">
+                    <span class="font-playfair text-2xl font-bold tracking-[0.22em] text-gold-gradient uppercase block">WEBLUXE</span>
+                    <span class="font-cormorant text-xs tracking-[0.45em] text-warmGold uppercase block">HIGH FASHION • BOUTIQUE</span>
+                </a>
+                <p class="font-cormorant text-creamAccent/80 text-base leading-relaxed">Be a fashionista with WebLuxe! A panoply of exquisite latest Indian wear with the perfect blend of glamour.</p>
+                <div class="flex items-center gap-4 text-warmGold text-lg pt-2">
+                    <a href="https://www.facebook.com/" target="_blank" rel="noopener" class="hover:text-silkVanilla transition-colors" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+                    <a href="https://www.instagram.com/" target="_blank" rel="noopener" class="hover:text-silkVanilla transition-colors" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="https://www.tiktok.com/" target="_blank" rel="noopener" class="hover:text-silkVanilla transition-colors" aria-label="TikTok"><i class="fa-brands fa-tiktok"></i></a>
+                    <a href="#" onclick="openWhatsApp('Hello WebLuxe High Fashion Boutique!'); return false;" class="hover:text-silkVanilla transition-colors" aria-label="WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
+                </div>
+            </div>
+            <div class="space-y-3">
+                <h4 class="font-playfair text-warmGold font-bold text-sm tracking-widest uppercase">Shop</h4>
+                <ul class="space-y-2 text-creamAccent/80" id="footerCats"></ul>
+            </div>
+            <div class="space-y-3">
+                <h4 class="font-playfair text-warmGold font-bold text-sm tracking-widest uppercase">Boutiques</h4>
+                <div class="space-y-2 text-creamAccent/80 font-cormorant text-base">
+                    <p><strong class="text-warmGold font-montserrat text-xs uppercase block">Rose Hill</strong> Royal Road</p>
+                    <p><strong class="text-warmGold font-montserrat text-xs uppercase block">Grand Baie</strong> Coastal Road</p>
+                </div>
+            </div>
+            <div class="space-y-3">
+                <h4 class="font-playfair text-warmGold font-bold text-sm tracking-widest uppercase">Contact</h4>
+                <div class="space-y-2 text-creamAccent/80 font-cormorant text-base">
+                    <p><i class="fa-brands fa-whatsapp mr-1 text-warmGold"></i> WhatsApp: <span class="ph-num">Your phone number</span></p>
+                    <p><i class="fa-solid fa-phone mr-1 text-warmGold"></i> <span class="ph-num">Your phone number</span></p>
+                    <p class="text-sm text-creamAccent/60">Queries via WhatsApp only.</p>
+                </div>
+            </div>
+        </div>
+        <p class="relative max-w-7xl mx-auto mt-10 font-montserrat text-[12px] leading-relaxed text-softGold border border-warmGold/30 rounded-sm px-4 py-3">This is a demo website made by WebLuxe. All pieces, prices, photos, names, addresses and numbers are examples, and the WhatsApp and call buttons do not contact anyone.</p>
+            <div class="relative max-w-7xl mx-auto pt-8 flex flex-col md:flex-row items-center justify-between gap-2 text-creamAccent/60 text-[11px]">
+            <p>© <span id="yearNow">2026</span> WebLuxe High Fashion Boutique, Mauritius. All rights reserved.</p>
+            <p class="text-creamAccent/70">Website built by <a href="https://webluxe.github.io/WebLuxe/" target="_blank" rel="noopener" class="text-warmGold font-semibold hover:text-softGold underline underline-offset-2">WebLuxe</a></p>
+        </div>
+    </footer>
+
+    <!-- BACKDROP / DRAWERS / MODAL -->
+    <div id="drawerBackdrop" onclick="closeAllPanels()" class="fixed inset-0 z-[45] bg-black/60 backdrop-blur-[2px] opacity-0 pointer-events-none"></div>
+
+    <aside id="cartDrawer" class="drawer fixed inset-y-0 right-0 z-50 w-full max-w-md bg-richBurgundy border-l border-warmGold/40 text-silkVanilla shadow-2xl transform translate-x-full flex flex-col font-montserrat" aria-label="Shopping bag">
+        <div class="p-6 border-b border-warmGold/30 flex justify-between items-center bg-royalMaroon">
+            <div class="flex items-center gap-3"><i class="fa-solid fa-bag-shopping text-warmGold text-xl"></i><h3 class="font-playfair text-xl font-bold tracking-wider">YOUR BAG</h3></div>
+            <button onclick="toggleCartDrawer(false)" class="text-creamAccent/70 hover:text-warmGold hover:rotate-90 transition-all duration-300 text-2xl" aria-label="Close bag"><i class="fa-solid fa-xmark"></i></button>
+        </div>
+        <div id="cartItemsContainer" class="flex-1 overflow-y-auto p-6 space-y-4"></div>
+        <div class="p-6 border-t border-warmGold/30 bg-royalMaroon space-y-4 text-xs">
+            <div class="flex justify-between text-base font-bold text-warmGold font-playfair"><span>Total (MUR):</span><span id="cartTotal" class="text-xl">Rs 0</span></div>
+            <button onclick="processCheckout()" class="w-full py-4 bg-warmGold hover:bg-softGold text-richBurgundy font-bold text-xs uppercase tracking-[0.2em] rounded-sm transition-all shadow-gold-glow">
+                Order on WhatsApp <i class="fa-brands fa-whatsapp ml-1 text-sm"></i>
+            </button>
+            <p class="text-center text-[10px] text-creamAccent/50">We'll confirm availability, size &amp; collection or delivery with you on WhatsApp.</p>
+        </div>
+    </aside>
+
+    <aside id="wishlistDrawer" class="drawer fixed inset-y-0 right-0 z-50 w-full max-w-md bg-richBurgundy border-l border-warmGold/40 text-silkVanilla shadow-2xl transform translate-x-full flex flex-col font-montserrat" aria-label="Wishlist">
+        <div class="p-6 border-b border-warmGold/30 flex justify-between items-center bg-royalMaroon">
+            <div class="flex items-center gap-3"><i class="fa-regular fa-heart text-warmGold text-xl"></i><h3 class="font-playfair text-xl font-bold tracking-wider">SAVED PIECES</h3></div>
+            <button onclick="toggleWishlistDrawer(false)" class="text-creamAccent/70 hover:text-warmGold hover:rotate-90 transition-all duration-300 text-2xl" aria-label="Close wishlist"><i class="fa-solid fa-xmark"></i></button>
+        </div>
+        <div id="wishlistItemsContainer" class="flex-1 overflow-y-auto p-6 space-y-4"></div>
+    </aside>
+
+    <div id="quickViewModal" class="is-closed fixed inset-0 z-50 bg-black/80 backdrop-blur-sm flex items-center justify-center p-4" onclick="if(event.target===this)closeQuickViewModal()" role="dialog" aria-modal="true" aria-label="Product quick view">
+        <div class="qv-panel bg-richBurgundy text-silkVanilla border border-warmGold/50 rounded-sm max-w-3xl w-full max-h-[90vh] overflow-y-auto p-6 sm:p-8 relative shadow-2xl font-montserrat">
+            <button onclick="closeQuickViewModal()" class="absolute top-4 right-4 text-warmGold hover:text-white hover:rotate-90 transition-all duration-300 text-2xl z-10" aria-label="Close"><i class="fa-solid fa-xmark"></i></button>
+            <div id="quickViewContent" class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center"></div>
+        </div>
+    </div>
+
+    <a id="backToTop" href="#hero" class="is-hidden fixed bottom-24 right-7 z-40 w-11 h-11 rounded-full bg-royalMaroon border border-warmGold/60 text-warmGold flex items-center justify-center shadow-xl hover:bg-warmGold hover:text-richBurgundy transition-colors" aria-label="Back to top"><i class="fa-solid fa-arrow-up text-sm"></i></a>
+
+    <a href="#" onclick="openWhatsApp('Hello WebLuxe High Fashion Boutique, I would like to ask about an outfit.'); return false;" class="fixed bottom-6 right-6 z-40 bg-emerald-700 hover:bg-emerald-600 text-white p-4 rounded-full shadow-2xl transition-all duration-300 hover:scale-110 flex items-center justify-center gap-2 font-montserrat text-xs tracking-wider" title="WhatsApp WebLuxe High Fashion Boutique">
+        <span class="absolute inset-0 rounded-full bg-emerald-600 animate-ping opacity-20 pointer-events-none"></span>
+        <i class="fa-brands fa-whatsapp text-2xl relative"></i>
+        <span class="hidden sm:inline font-bold relative">WhatsApp Us</span>
+    </a>
+
+    <div id="toast" class="fixed bottom-6 left-6 z-[80] bg-royalMaroon border border-warmGold/80 text-silkVanilla p-4 rounded-sm shadow-2xl flex items-center gap-3 transform translate-y-24 opacity-0 transition-all duration-500 pointer-events-none font-montserrat text-xs max-w-[calc(100vw-7rem)]" role="status" aria-live="polite">
+        <i class="fa-solid fa-circle-check text-warmGold text-xl"></i>
+        <div><span id="toastTitle" class="font-bold text-warmGold block">Notification</span><span id="toastMsg" class="text-creamAccent/90"></span></div>
+    </div>
+
+    <script src="data.js"></script>
+    <script src="demo/demo.js"></script>
+    <script src="demo/tiers.js"></script>
+    <script>
+        /* ==========================================================================
+           0. SHOP SETTINGS — edit these to update the site
+           ========================================================================== */
+        const SHOP = {
+            name: 'WebLuxe High Fashion Boutique',
+            whatsapp: ''   // the shop's WhatsApp number, international format, no + or spaces
+        };
+        const REDUCED_MOTION = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+        const IMG = (id, w = 800) => !id ? '' : /^(https?:)?\/\/|[\/.]/.test(id) ? id : `https://images.unsplash.com/photo-${id}?auto=format&fit=crop&w=${w}&q=80`;
+        /* srcset for an Unsplash ID, so phones download small photos (other sources are used as they are) */
+        const SRCSET = (id, sizes) => !id || /^(https?:)?\/\/|[\/.]/.test(id) ? '' : ` srcset="${[300, 450, 650, 900].map(w => `${IMG(id, w).replace('q=80', 'q=72')} ${w}w`).join(', ')}" sizes="${sizes}"`;
+        const HOVER = matchMedia('(hover:hover)').matches;   // touch screens never see the second photo, so they skip it
+        const esc = s => String(s ?? '').replace(/[&<>"']/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]));
+
+        /* Categories: key → label, tile image */
+        const CATEGORIES = [
+            { key: 'bridal',  label: 'Bridal Lehengas',      img: '1654764746225-e63f5e90facd' },
+            { key: 'lehenga', label: 'Party Lehengas',       img: '1733937140732-2cc70a1d7017' },
+            { key: 'saree',   label: 'Sarees',               img: '1641699862936-be9f49b1c38d' },
+            { key: 'gown',    label: 'Gowns & Anarkalis',    img: '1761571260010-8aa90a08c934' },
+            { key: 'groom',   label: 'Groom Sherwanis',      img: '1760080838961-4208536db385' },
+            { key: 'men',     label: "Men's Kurtas",         img: '1767775498862-d4740ce574ce' }
+        ];
+        const CAT_LABEL = Object.fromEntries(CATEGORIES.map(c => [c.key, c.label]));
+
+        /* ==========================================================================
+           1. PRODUCTS + ANNOUNCEMENTS come from data.js (edit them at /admin).
+              Photos can be an Unsplash photo ID, a full URL, or a repo path like images/x.jpg
+           ========================================================================== */
+        const DATA = window.SITE_DATA || { announcements: [], products: [] };
+        const PRODUCTS = (DATA.products || []).filter(p => !p.hidden).map(p => ({
+            id: p.id, name: p.name, category: p.category, priceMUR: Number(p.price) || 0,
+            imgMain: IMG(p.img), imgHover: IMG(p.hover || p.img), tag: p.tag || '',
+            raw: p.img, rawHover: p.hover || p.img
+        }));
+
+        const store = {
+            get(k, f) { try { return JSON.parse(localStorage.getItem(k)) ?? f; } catch (e) { return f; } },
+            set(k, v) { try { localStorage.setItem(k, JSON.stringify(v)); } catch (e) {} }
+        };
+        let cart = store.get('hf_cart2', []).filter(c => PRODUCTS.some(p => p.id === c.id));
+        let wishlistIds = store.get('hf_wishlist2', []).filter(id => PRODUCTS.some(p => p.id === id));
+        const filters = { cat: 'all', q: '', sort: 'featured' };
+        const PAGE = 12;
+        let visibleCount = PAGE;
+        const rs = n => 'Rs ' + Math.round(n).toLocaleString('en-US');
+        const byId = id => PRODUCTS.find(p => p.id === id);
+
+        /* ==========================================================================
+           2. STATIC BUILDERS: marquee, category tiles, chips, footer links
+           ========================================================================== */
+        (function buildStatic() {
+            const words = ['Bridal Lehengas', 'Party Wear', 'Sarees', 'Gowns & Anarkalis', 'Groom Sherwanis', "Men's Ethnic Wear", 'New Arrivals Weekly'];
+            const half = `<div class="flex items-center gap-10 pr-10">${words.map(w => `<span>${w}</span><i class="fa-solid fa-diamond text-[8px]"></i>`).join('')}</div>`;
+            document.getElementById('marquee').innerHTML = half + half;
+
+            document.getElementById('categoryTiles').innerHTML = CATEGORIES.map((c, i) => {
+                const count = PRODUCTS.filter(p => p.category === c.key).length;
+                return `
+                <button onclick="goToCategory('${c.key}')" class="cat-tile reveal-element group relative h-56 sm:h-80 rounded-sm overflow-hidden filigree-border bg-charcoal text-left" style="transition-delay:${(i % 3) * 90}ms">
+                    <img src="${IMG(c.img, 700)}"${SRCSET(c.img, '(max-width:640px) 50vw, 33vw')} alt="${c.label}" loading="lazy" class="absolute inset-0 w-full h-full object-cover object-top">
+                    <span class="absolute inset-0 bg-gradient-to-t from-richBurgundy via-richBurgundy/20 to-transparent"></span>
+                    <span class="absolute bottom-4 left-4 right-4 text-silkVanilla">
+                        <span class="block font-montserrat text-[10px] tracking-[0.25em] uppercase text-warmGold">${count} pieces</span>
+                        <span class="block font-playfair text-lg sm:text-2xl font-bold leading-tight">${c.label}</span>
+                        <span class="cat-line block h-[2px] w-12 bg-warmGold mt-2"></span>
+                    </span>
+                </button>`;
+            }).join('');
+
+            const chipBase = 'category-btn px-5 py-2.5 rounded-full border transition-all duration-300 whitespace-nowrap';
+            document.getElementById('categoryChips').innerHTML =
+                [{ key: 'all', label: 'All' }, ...CATEGORIES].map(c =>
+                    `<button onclick="filterCategory('${c.key}')" data-cat="${c.key}" class="${chipBase} border-warmGold/30 text-silkVanilla hover:border-warmGold hover:text-warmGold">${c.label}</button>`).join('');
+
+            /* Hero: slow-turning background mandala + rising gold dust */
+            buildMandala(document.getElementById('heroMandala'));
+            const hd = document.getElementById('heroDust');
+            for (let h = 0; h < 22; h++) {
+                const hb = document.createElement('b');
+                hb.style.left = (Math.random() * 100) + '%';
+                hb.style.setProperty('--s', (1.5 + Math.random() * 3) + 'px');
+                hb.style.setProperty('--t', (9 + Math.random() * 9) + 's');
+                hb.style.setProperty('--d', (Math.random() * 9) + 's');
+                hb.style.setProperty('--x', ((Math.random() - 0.5) * 160) + 'px');
+                hd.appendChild(hb);
+            }
+
+            document.getElementById('footerCats').innerHTML = CATEGORIES.map(c =>
+                `<li><a href="#" onclick="goToCategory('${c.key}'); return false;" class="hover:text-warmGold hover:pl-1 transition-all">${c.label}</a></li>`).join('');
+        })();
+
+        /* ==========================================================================
+           3. SCROLL REVEAL
+           ========================================================================== */
+        const revealObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) { entry.target.classList.add('active'); revealObserver.unobserve(entry.target); }
+            });
+        }, { threshold: 0.12, rootMargin: '0px 0px -40px 0px' });
+        function observeReveals(root = document) { root.querySelectorAll('.reveal-element:not(.active)').forEach(el => revealObserver.observe(el)); }
+
+        /* ==========================================================================
+           4. PRODUCT GRID (no descriptions — photo, name, price)
+           ========================================================================== */
+        function cardHTML(p) {
+            const wished = wishlistIds.includes(p.id);
+            return `
+                <div class="relative luxury-img-wrapper sheen aspect-[3/4] bg-charcoal overflow-hidden cursor-pointer" onclick="openQuickViewModal(${p.id})">
+                    <img src="${p.imgMain}"${SRCSET(p.raw, '(max-width:640px) 50vw, (max-width:1024px) 33vw, 25vw')} alt="${esc(p.name)}" loading="lazy" class="card-img w-full h-full object-cover object-top transition-opacity duration-700 group-hover:opacity-0">
+                    ${HOVER ? `<img src="${p.imgHover}"${SRCSET(p.rawHover, '(max-width:1024px) 33vw, 25vw')} alt="" aria-hidden="true" loading="lazy" class="w-full h-full object-cover object-top absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-700">` : ''}
+                    ${p.tag ? `<span class="absolute top-2.5 left-2.5 z-10 bg-richBurgundy/90 text-warmGold border border-warmGold/40 text-[9px] font-bold px-2 py-0.5 rounded-xs tracking-widest uppercase">${p.tag}</span>` : ''}
+                    <button data-wish="${p.id}" onclick="event.stopPropagation(); toggleWishlist(${p.id})" class="absolute top-2.5 right-2.5 z-10 bg-silkVanilla/90 hover:bg-royalMaroon text-richBurgundy hover:text-warmGold w-8 h-8 rounded-full flex items-center justify-center transition-colors shadow-md" aria-label="Save to wishlist">
+                        <i class="${wished ? 'fa-solid text-royalMaroon' : 'fa-regular'} fa-heart text-sm"></i>
+                    </button>
+                    <div class="hidden sm:block absolute inset-x-3 bottom-3 z-10 opacity-0 translate-y-3 group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-500">
+                        <span class="block w-full text-center py-2.5 bg-royalMaroon/95 text-warmGold text-[10px] font-bold tracking-[0.2em] uppercase border border-warmGold/50">Quick View</span>
+                    </div>
+                </div>
+                <div class="p-3 sm:p-4 flex-1 flex flex-col justify-between gap-2">
+                    <div>
+                        <span class="text-[9px] sm:text-[10px] text-royalMaroon/70 uppercase font-bold tracking-widest block">${CAT_LABEL[p.category]}</span>
+                        <h3 onclick="openQuickViewModal(${p.id})" class="font-playfair font-bold text-richBurgundy text-sm sm:text-base leading-snug cursor-pointer mt-0.5">${esc(p.name)}</h3>
+                    </div>
+                    <div class="flex items-center justify-between gap-2">
+                        <span class="font-playfair font-bold text-royalMaroon text-base sm:text-lg">${rs(p.priceMUR)}</span>
+                        <button onclick="addToCart(${p.id}, this)" class="add-btn px-2.5 sm:px-3 py-1.5 bg-royalMaroon hover:bg-richBurgundy text-warmGold border border-warmGold/40 hover:border-warmGold text-[10px] sm:text-xs font-bold uppercase tracking-wider rounded-xs transition-all" aria-label="Add ${esc(p.name)} to bag">+ Bag</button>
+                    </div>
+                </div>`;
+        }
+
+        function renderProducts() {
+            const items = getFilteredProducts();
+            const grid = document.getElementById('productGrid');
+            document.getElementById('productCount').innerText = items.length;
+            const shown = items.slice(0, visibleCount);
+            const existing = grid.querySelectorAll('.product-card').length;
+            grid.innerHTML = '';
+
+            if (items.length === 0) {
+                grid.innerHTML = `<div class="col-span-full text-center py-16 font-cormorant text-xl text-cocoaSoft">
+                    <i class="fa-solid fa-gem text-3xl text-warmGold/60 mb-3 block"></i>Nothing found — but we get new pieces every week.
+                    <button onclick="openWhatsApp('Hello WebLuxe High Fashion Boutique, I am looking for: ${filters.q.replace(/'/g, '')}')" class="block mx-auto mt-4 px-6 py-2.5 bg-emerald-700 text-white font-montserrat text-[11px] font-bold tracking-widest uppercase rounded-sm hover:bg-emerald-600 transition-colors"><i class="fa-brands fa-whatsapp mr-1"></i> Ask us on WhatsApp</button></div>`;
+            }
+            shown.forEach((p, i) => {
+                const card = document.createElement('div');
+                card.className = 'product-card bg-silkVanilla border border-warmGold/20 rounded-sm overflow-hidden flex flex-col group shadow-sm hover:shadow-2xl hover:border-warmGold/60 reveal-element';
+                card.style.transitionDelay = `${(i % 4) * 80}ms`;
+                card.addEventListener('transitionend', () => { card.style.transitionDelay = '0ms'; }, { once: true });
+                card.innerHTML = cardHTML(p);
+                grid.appendChild(card);
+            });
+            const btn = document.getElementById('showMoreBtn');
+            btn.style.display = items.length > visibleCount ? '' : 'none';
+            btn.innerHTML = `Show More (${Math.max(0, items.length - visibleCount)}) <i class="fa-solid fa-chevron-down ml-2 text-[10px]"></i>`;
+            observeReveals(grid);
+            return existing;
+        }
+
+        function getFilteredProducts() {
+            const q = filters.q.trim().toLowerCase();
+            let items = PRODUCTS.filter(p =>
+                (filters.cat === 'all' || p.category === filters.cat) &&
+                (!q || (p.name + ' ' + CAT_LABEL[p.category]).toLowerCase().includes(q)));
+            if (filters.sort === 'low') items = [...items].sort((a, b) => a.priceMUR - b.priceMUR);
+            if (filters.sort === 'high') items = [...items].sort((a, b) => b.priceMUR - a.priceMUR);
+            return items;
+        }
+
+        let filterTimer;
+        function applyFilters(animate = true) {
+            filters.sort = document.getElementById('sortSelect').value;
+            visibleCount = PAGE;
+            const grid = document.getElementById('productGrid');
+            if (!animate || REDUCED_MOTION) { renderProducts(); return; }
+            clearTimeout(filterTimer);
+            grid.classList.add('grid-out');
+            filterTimer = setTimeout(() => { renderProducts(); requestAnimationFrame(() => grid.classList.remove('grid-out')); }, 280);
+        }
+
+        function showMore() {
+            const before = visibleCount;
+            visibleCount += PAGE;
+            const items = getFilteredProducts();
+            const grid = document.getElementById('productGrid');
+            items.slice(before, visibleCount).forEach((p, i) => {
+                const card = document.createElement('div');
+                card.className = 'product-card bg-silkVanilla border border-warmGold/20 rounded-sm overflow-hidden flex flex-col group shadow-sm hover:shadow-2xl hover:border-warmGold/60 reveal-element';
+                card.style.transitionDelay = `${(i % 4) * 80}ms`;
+                card.addEventListener('transitionend', () => { card.style.transitionDelay = '0ms'; }, { once: true });
+                card.innerHTML = cardHTML(p);
+                grid.appendChild(card);
+            });
+            const btn = document.getElementById('showMoreBtn');
+            btn.style.display = items.length > visibleCount ? '' : 'none';
+            btn.innerHTML = `Show More (${Math.max(0, items.length - visibleCount)}) <i class="fa-solid fa-chevron-down ml-2 text-[10px]"></i>`;
+            observeReveals(grid);
+        }
+
+        function setActiveChip(cat) {
+            document.querySelectorAll('.category-btn').forEach(btn => {
+                const on = btn.dataset.cat === cat;
+                btn.classList.toggle('bg-warmGold', on);
+                btn.classList.toggle('text-richBurgundy', on);
+                btn.classList.toggle('font-bold', on);
+                btn.classList.toggle('border-warmGold', on);
+                btn.classList.toggle('shadow-gold-sm', on);
+                btn.classList.toggle('text-silkVanilla', !on);
+                btn.classList.toggle('border-warmGold/30', !on);
+                if (on) {
+                    const bar = btn.parentElement;
+                    bar.scrollTo({ left: btn.offsetLeft - bar.offsetLeft - bar.clientWidth / 2 + btn.offsetWidth / 2, behavior: REDUCED_MOTION ? 'auto' : 'smooth' });
+                }
+            });
+        }
+
+        function filterCategory(cat, animate = true) {
+            filters.cat = cat;
+            setActiveChip(cat);
+            applyFilters(animate);
+        }
+
+        let searchTimer;
+        function onSearch() {
+            clearTimeout(searchTimer);
+            searchTimer = setTimeout(() => { filters.q = document.getElementById('searchInput').value; applyFilters(); }, 220);
+        }
+
+        /* Jump to a category with the curtain transition */
+        function goToCategory(cat) {
+            const label = CAT_LABEL[cat] || 'The Collection';
+            wipeTo(document.getElementById('collections'), label, () => {
+                filters.q = ''; document.getElementById('searchInput').value = '';
+                filterCategory(cat, false);
+            });
+        }
+
+        /* ==========================================================================
+           5. PANELS
+           ========================================================================== */
+        function setBackdrop(on) {
+            const bd = document.getElementById('drawerBackdrop');
+            bd.classList.toggle('opacity-0', !on);
+            bd.classList.toggle('pointer-events-none', !on);
+            document.body.style.overflow = on ? 'hidden' : '';
+        }
+        function setDrawer(id, open) {
+            const other = id === 'cartDrawer' ? 'wishlistDrawer' : 'cartDrawer';
+            if (open) document.getElementById(other).classList.add('translate-x-full');
+            document.getElementById(id).classList.toggle('translate-x-full', !open);
+            setBackdrop(open);
+        }
+        function toggleCartDrawer(force) { const d = document.getElementById('cartDrawer'); setDrawer('cartDrawer', typeof force === 'boolean' ? force : d.classList.contains('translate-x-full')); }
+        function toggleWishlistDrawer(force) { const d = document.getElementById('wishlistDrawer'); setDrawer('wishlistDrawer', typeof force === 'boolean' ? force : d.classList.contains('translate-x-full')); }
+        function closeAllPanels() {
+            document.getElementById('cartDrawer').classList.add('translate-x-full');
+            document.getElementById('wishlistDrawer').classList.add('translate-x-full');
+            setBackdrop(false);
+            closeQuickViewModal();
+        }
+        document.addEventListener('keydown', e => { if (e.key === 'Escape') { closeAllPanels(); toggleMobileNav(false); } });
+
+        function toggleMobileNav(force) {
+            const menu = document.getElementById('mobileNavMenu');
+            const btn = document.getElementById('mobileNavBtn');
+            const open = typeof force === 'boolean' ? force : !menu.classList.contains('open');
+            menu.classList.toggle('open', open);
+            btn.setAttribute('aria-expanded', open);
+            btn.innerHTML = open ? '<i class="fa-solid fa-xmark"></i>' : '<i class="fa-solid fa-bars-staggered"></i>';
+        }
+
+        function openQuickViewModal(id) {
+            const p = byId(id);
+            if (!p) return;
+            const wished = wishlistIds.includes(p.id);
+            document.getElementById('quickViewContent').innerHTML = `
+                <div class="space-y-3">
+                    <div class="luxury-img-wrapper sheen aspect-[3/4] bg-charcoal rounded-sm overflow-hidden filigree-border">
+                        <img id="qvMainImg" src="${p.imgMain}" alt="${esc(p.name)}" class="w-full h-full object-cover object-top transition-opacity duration-300">
+                    </div>
+                    <div class="flex gap-3">
+                        ${[p.imgMain, p.imgHover].map((src, i) => `
+                            <button data-src="${esc(src)}" onclick="swapQvImage(this, this.dataset.src)" class="qv-thumb w-14 h-[74px] rounded-xs overflow-hidden border ${i === 0 ? 'border-warmGold' : 'border-warmGold/20'} hover:border-warmGold transition-colors" aria-label="View photo ${i + 1}">
+                                <img src="${src}" alt="" class="w-full h-full object-cover object-top">
+                            </button>`).join('')}
+                    </div>
+                </div>
+                <div class="space-y-5 font-montserrat">
+                    <div class="border-b border-warmGold/30 pb-4">
+                        <span class="text-[10px] text-warmGold font-bold tracking-[0.2em] uppercase block">${CAT_LABEL[p.category]}</span>
+                        <h3 class="font-playfair text-2xl sm:text-3xl font-bold text-silkVanilla mt-1">${esc(p.name)}</h3>
+                        <span class="font-playfair text-2xl text-warmGold font-bold block mt-2">${rs(p.priceMUR)}</span><span class="block font-cormorant italic text-creamAccent/60 text-sm mt-1">Example price and photo for this demo.</span>
+                    </div>
+                    <p class="text-xs text-creamAccent/70 flex items-center gap-2"><i class="fa-solid fa-ruler text-warmGold"></i> Sizes, colours &amp; alterations — just ask us.</p>
+                    <div class="flex flex-col gap-3">
+                        <div class="flex gap-3">
+                            <button onclick="addToCart(${p.id}, document.getElementById('qvMainImg')); closeQuickViewModal();" class="flex-1 py-3.5 bg-warmGold hover:bg-softGold text-richBurgundy font-bold text-xs uppercase tracking-[0.2em] rounded-sm transition-all shadow-gold-glow">Add to Bag</button>
+                            <button data-wish="${p.id}" onclick="toggleWishlist(${p.id})" class="w-12 border border-warmGold/50 text-warmGold hover:bg-royalMaroon rounded-sm transition-all" aria-label="Save to wishlist"><i class="${wished ? 'fa-solid' : 'fa-regular'} fa-heart"></i></button>
+                        </div>
+                        <button onclick="openWhatsApp('Hello WebLuxe High Fashion Boutique, is the ${esc(p.name.replace(/['"\\]/g, ''))} (${rs(p.priceMUR)}) available?')" class="w-full py-3 bg-emerald-800/60 hover:bg-emerald-700 border border-emerald-500/40 text-white font-bold text-xs uppercase tracking-widest rounded-sm transition-all">
+                            <i class="fa-brands fa-whatsapp mr-1"></i> Ask About This Piece
+                        </button>
+                    </div>
+                </div>`;
+            document.getElementById('quickViewModal').classList.remove('is-closed');
+            document.body.style.overflow = 'hidden';
+        }
+        function swapQvImage(btn, src) {
+            const img = document.getElementById('qvMainImg');
+            document.querySelectorAll('.qv-thumb').forEach(t => { t.classList.remove('border-warmGold'); t.classList.add('border-warmGold/20'); });
+            btn.classList.add('border-warmGold'); btn.classList.remove('border-warmGold/20');
+            img.style.opacity = 0;
+            setTimeout(() => { img.src = src; img.style.opacity = 1; }, 250);
+        }
+        function closeQuickViewModal() {
+            const modal = document.getElementById('quickViewModal');
+            if (modal.classList.contains('is-closed')) return;
+            modal.classList.add('is-closed');
+            const drawerOpen = !document.getElementById('cartDrawer').classList.contains('translate-x-full') ||
+                               !document.getElementById('wishlistDrawer').classList.contains('translate-x-full');
+            if (!drawerOpen) document.body.style.overflow = '';
+        }
+
+        /* ==========================================================================
+           6. BAG
+           ========================================================================== */
+        function bump(el) { el.classList.remove('badge-bump'); void el.offsetWidth; el.classList.add('badge-bump'); }
+        function flyToBag(fromEl) {
+            if (REDUCED_MOTION || !fromEl || !fromEl.animate) return Promise.resolve();
+            const src = fromEl.tagName === 'IMG' ? fromEl : fromEl.closest('.product-card')?.querySelector('.card-img');
+            if (!src) return Promise.resolve();
+            const bag = document.getElementById('bagBtn');
+            const r1 = src.getBoundingClientRect(), r2 = bag.getBoundingClientRect();
+            const dot = document.createElement('img');
+            dot.src = src.currentSrc || src.src;
+            dot.className = 'fly-dot';
+            const sx = r1.left + r1.width / 2 - 32, sy = r1.top + r1.height / 2 - 32;
+            dot.style.left = sx + 'px'; dot.style.top = sy + 'px';
+            document.body.appendChild(dot);
+            const dx = r2.left + r2.width / 2 - 32 - sx, dy = r2.top + r2.height / 2 - 32 - sy;
+            return dot.animate([
+                { transform: 'translate(0,0) scale(.4)', opacity: 0 },
+                { transform: 'translate(0,-20px) scale(1)', opacity: 1, offset: .15 },
+                { transform: `translate(${dx * .55}px, ${dy * .55 - 90}px) scale(.75)`, opacity: 1, offset: .55 },
+                { transform: `translate(${dx}px, ${dy}px) scale(.2)`, opacity: .4 }
+            ], { duration: 900, easing: 'cubic-bezier(.5,0,.3,1)' }).finished.then(() => dot.remove()).catch(() => dot.remove());
+        }
+        function addToCart(id, sourceEl) {
+            const p = byId(id);
+            if (!p) return;
+            const existing = cart.find(c => c.id === id);
+            if (existing) existing.qty += 1; else cart.push({ id, qty: 1 });
+            if (sourceEl && sourceEl.classList && sourceEl.classList.contains('add-btn')) {
+                sourceEl.innerHTML = '<i class="fa-solid fa-check"></i>';
+                sourceEl.classList.add('bg-warmGold', '!text-richBurgundy');
+                setTimeout(() => { sourceEl.innerHTML = '+ Bag'; sourceEl.classList.remove('bg-warmGold', '!text-richBurgundy'); }, 1400);
+            }
+            if (REDUCED_MOTION || !sourceEl) updateCartUI();
+            else flyToBag(sourceEl).then(() => { updateCartUI(); bump(document.getElementById('cartBadge')); });
+            showToast('Added to Bag', p.name);
+        }
+        function cartTotal() { return cart.reduce((s, c) => s + byId(c.id).priceMUR * c.qty, 0); }
+        function updateCartUI() {
+            store.set('hf_cart2', cart);
+            const container = document.getElementById('cartItemsContainer');
+            document.getElementById('cartBadge').innerText = cart.reduce((s, c) => s + c.qty, 0);
+            document.getElementById('cartTotal').innerText = rs(cartTotal());
+            container.innerHTML = '';
+            if (cart.length === 0) {
+                container.innerHTML = `<div class="text-center py-16 text-creamAccent/60 font-cormorant text-lg">
+                    <i class="fa-solid fa-bag-shopping text-4xl mb-3 block text-warmGold/40"></i>Your bag is empty.
+                    <a href="#collections" onclick="toggleCartDrawer(false)" class="block mx-auto mt-5 w-max px-5 py-2 border border-warmGold/50 text-warmGold font-montserrat text-[10px] tracking-widest uppercase hover:bg-royalMaroon transition-colors">Browse the collection</a></div>`;
+                return;
+            }
+            cart.forEach(c => {
+                const item = byId(c.id);
+                const row = document.createElement('div');
+                row.className = 'bg-royalMaroon p-4 rounded-sm border border-warmGold/20 flex items-center justify-between gap-3';
+                row.innerHTML = `
+                    <img src="${item.imgMain}" alt="" class="w-14 h-16 object-cover object-top rounded-xs border border-warmGold/30">
+                    <div class="flex-1">
+                        <h4 class="font-playfair font-bold text-silkVanilla text-sm">${esc(item.name)}</h4>
+                        <span class="text-xs text-warmGold">${rs(item.priceMUR)}</span>
+                        <div class="flex items-center gap-2 mt-2">
+                            <button onclick="changeQty(${item.id}, -1)" class="w-6 h-6 bg-richBurgundy text-white font-bold text-xs flex items-center justify-center border border-warmGold/30 hover:border-warmGold" aria-label="Decrease">-</button>
+                            <span class="text-xs font-bold text-white w-4 text-center">${c.qty}</span>
+                            <button onclick="changeQty(${item.id}, 1)" class="w-6 h-6 bg-richBurgundy text-white font-bold text-xs flex items-center justify-center border border-warmGold/30 hover:border-warmGold" aria-label="Increase">+</button>
+                        </div>
+                    </div>
+                    <button onclick="removeFromCart(${item.id})" class="text-creamAccent/50 hover:text-warmGold text-sm" aria-label="Remove"><i class="fa-solid fa-trash-can"></i></button>`;
+                container.appendChild(row);
+            });
+        }
+        function changeQty(id, delta) {
+            const item = cart.find(c => c.id === id);
+            if (!item) return;
+            item.qty += delta;
+            if (item.qty <= 0) cart = cart.filter(c => c.id !== id);
+            updateCartUI();
+        }
+        function removeFromCart(id) { cart = cart.filter(c => c.id !== id); updateCartUI(); }
+        function openWhatsApp(text) { window.open(`https://wa.me/${SHOP.whatsapp}?text=${encodeURIComponent(text)}`, '_blank', 'noopener'); }
+        function processCheckout() {
+            if (cart.length === 0) { showToast('Bag Empty', 'Add a piece first.'); return; }
+            const lines = cart.map(c => { const p = byId(c.id); return `• ${p.name} x${c.qty} — ${rs(p.priceMUR * c.qty)}`; });
+            openWhatsApp(`Hello ${SHOP.name}, I would like to order:\n\n${lines.join('\n')}\n\nTotal: ${rs(cartTotal())}\n\nName:\nSize / measurements:`);
+            showToast('Order sent to WhatsApp', "We'll confirm availability with you.");
+        }
+
+        /* ==========================================================================
+           7. WISHLIST
+           ========================================================================== */
+        function toggleWishlist(id) {
+            const p = byId(id);
+            if (!p) return;
+            const idx = wishlistIds.indexOf(id);
+            const adding = idx === -1;
+            if (adding) wishlistIds.push(id); else wishlistIds.splice(idx, 1);
+            store.set('hf_wishlist2', wishlistIds);
+            showToast(adding ? 'Saved to Wishlist' : 'Removed from Wishlist', p.name);
+            document.querySelectorAll(`[data-wish="${id}"] i`).forEach(icon => {
+                icon.classList.toggle('fa-solid', adding);
+                icon.classList.toggle('fa-regular', !adding);
+                icon.classList.toggle('text-royalMaroon', adding && !icon.closest('#quickViewModal'));
+                icon.classList.remove('heart-pop'); void icon.offsetWidth; icon.classList.add('heart-pop');
+            });
+            bump(document.getElementById('wishlistBadge'));
+            updateWishlistDrawerUI();
+        }
+        function updateWishlistDrawerUI() {
+            const container = document.getElementById('wishlistItemsContainer');
+            document.getElementById('wishlistBadge').innerText = wishlistIds.length;
+            container.innerHTML = '';
+            if (wishlistIds.length === 0) {
+                container.innerHTML = `<div class="text-center py-12 text-creamAccent/60 font-cormorant text-lg"><i class="fa-regular fa-heart text-4xl mb-3 block text-warmGold/40"></i>No saved pieces yet.</div>`;
+                return;
+            }
+            wishlistIds.forEach(id => {
+                const item = byId(id);
+                const row = document.createElement('div');
+                row.className = 'bg-royalMaroon p-4 rounded-sm border border-warmGold/20 flex items-center justify-between gap-3';
+                row.innerHTML = `
+                    <img src="${item.imgMain}" alt="" class="w-14 h-16 object-cover object-top rounded-xs cursor-pointer" onclick="toggleWishlistDrawer(false); openQuickViewModal(${item.id})">
+                    <div class="flex-1"><h4 class="font-playfair font-bold text-silkVanilla text-sm">${esc(item.name)}</h4><span class="text-xs text-warmGold">${rs(item.priceMUR)}</span></div>
+                    <div class="flex flex-col gap-2 items-end">
+                        <button onclick="addToCart(${item.id})" class="px-3 py-1.5 bg-warmGold text-richBurgundy font-bold text-[10px] uppercase rounded-xs hover:bg-softGold transition-colors">+ Bag</button>
+                        <button onclick="toggleWishlist(${item.id})" class="text-[10px] text-creamAccent/50 hover:text-warmGold uppercase tracking-wider">Remove</button>
+                    </div>`;
+                container.appendChild(row);
+            });
+        }
+
+        /* ==========================================================================
+           8. FORMS & TOAST
+           ========================================================================== */
+        function handleAppointmentSubmit(e) {
+            e.preventDefault();
+            const f = e.target.elements;
+            const v = n => f.namedItem(n).value;
+            const dateStr = new Date(v('date') + 'T00:00').toLocaleDateString('en-GB', { weekday: 'long', day: 'numeric', month: 'long', year: 'numeric' });
+            openWhatsApp(`Hello ${SHOP.name}, I would like to visit.\n\nName: ${v('name')}\nBoutique: ${v('boutique')}\nDate: ${dateStr}\nLooking for: ${v('attire')}`);
+            showToast('Message ready on WhatsApp', 'We look forward to seeing you!');
+            e.target.reset();
+        }
+        let toastTimer;
+        function showToast(title, msg) {
+            const toast = document.getElementById('toast');
+            document.getElementById('toastTitle').innerText = title;
+            document.getElementById('toastMsg').innerText = msg;
+            toast.classList.remove('translate-y-24', 'opacity-0');
+            clearTimeout(toastTimer);
+            toastTimer = setTimeout(() => toast.classList.add('translate-y-24', 'opacity-0'), 3000);
+        }
+
+        /* ==========================================================================
+           9. SECTION TRANSITION — silk pleats drop, gold mandala draws + title, pleats lift
+           ========================================================================== */
+        const SECTION_TITLES = { hero: 'Welcome', categories: 'Shop by Category', collections: 'The Collection', 'bride-groom': 'Bride & Groom', visit: 'Visit Us' };
+        let wiping = false;
+        const sleep = ms => new Promise(r => setTimeout(r, ms));
+        function jumpTo(target) {
+            if (target.id === 'collections') target = document.getElementById('chipBar'); // land with the category chips in view
+            const html = document.documentElement;
+            const prev = html.style.scrollBehavior;
+            html.style.scrollBehavior = 'auto';
+            const extra = document.getElementById('mainHeader').offsetHeight;
+            const y = target.id === 'hero' ? 0 : target.getBoundingClientRect().top + window.scrollY - extra;
+            window.scrollTo(0, Math.max(0, y));
+            html.style.scrollBehavior = prev;
+        }
+        async function wipeTo(target, title, midway) {
+            if (wiping) return;
+            if (REDUCED_MOTION || !document.body.animate) { if (midway) midway(); jumpTo(target); return; }
+            wiping = true;
+            const wrap = document.getElementById('sectionWipe');
+            const pleats = [...wrap.querySelectorAll('.pleat')];
+            const center = wrap.querySelector('.wipe-center');
+            const titleEl = document.getElementById('wipeTitle');
+            titleEl.innerHTML = [...(title || 'Harshinee')].map((ch, i) => `<span style="--i:${i}">${ch === ' ' ? '&nbsp;' : ch}</span>`).join('');
+            const mid = (pleats.length - 1) / 2;
+            const ease = 'cubic-bezier(.77,0,.18,1)';
+            wrap.classList.add('is-active');
+            try {
+                const ins = pleats.map((p, i) => p.animate(
+                    [{ transform: 'translateY(-101%)' }, { transform: 'translateY(0)' }],
+                    { duration: 520, delay: Math.abs(i - mid) * 55, easing: ease, fill: 'forwards' }).finished);
+                await Promise.all(ins);
+                center.style.opacity = 1;
+                wrap.classList.add('is-drawing');
+                if (midway) midway();
+                jumpTo(target);
+                await sleep(720);
+                await center.animate([{ opacity: 1, transform: 'scale(1)' }, { opacity: 0, transform: 'scale(1.06)' }], { duration: 260, easing: 'ease-in', fill: 'forwards' }).finished;
+                const outs = pleats.map((p, i) => p.animate(
+                    [{ transform: 'translateY(0)' }, { transform: 'translateY(101%)' }],
+                    { duration: 560, delay: (mid - Math.abs(i - mid)) * 55, easing: ease, fill: 'forwards' }).finished);
+                await Promise.all(outs);
+            } catch (err) { jumpTo(target); }
+            pleats.forEach(p => p.getAnimations().forEach(a => a.cancel()));
+            center.getAnimations().forEach(a => a.cancel());
+            center.style.opacity = '';
+            wrap.classList.remove('is-active', 'is-drawing');
+            wiping = false;
+        }
+        document.addEventListener('click', e => {
+            const a = e.target.closest('a[href^="#"]');
+            if (!a) return;
+            const href = a.getAttribute('href');
+            if (href.length < 2) return;
+            const target = document.querySelector(href);
+            if (!target) return;
+            e.preventDefault();
+            wipeTo(target, SECTION_TITLES[target.id] || 'WebLuxe');
+        });
+
+        /* ==========================================================================
+           10. SCROLL EFFECTS
+           ========================================================================== */
+        const header = document.getElementById('mainHeader');
+        const progress = document.getElementById('scrollProgress');
+        const backToTop = document.getElementById('backToTop');
+        let ticking = false;
+        function onScroll() {
+            const y = window.scrollY;
+            const max = document.documentElement.scrollHeight - window.innerHeight;
+            header.classList.toggle('is-scrolled', y > 60);
+            progress.style.transform = `scaleX(${max > 0 ? y / max : 0})`;
+            backToTop.classList.toggle('is-hidden', y < 700);
+            ticking = false;
+        }
+        window.addEventListener('scroll', () => { if (!ticking) { requestAnimationFrame(onScroll); ticking = true; } }, { passive: true });
+        const spy = new IntersectionObserver(entries => {
+            entries.forEach(en => { if (en.isIntersecting) document.querySelectorAll('.nav-link').forEach(l => l.classList.toggle('is-active', l.dataset.nav === en.target.id)); });
+        }, { rootMargin: '-45% 0px -50% 0px' });
+        ['hero', 'collections', 'bride-groom', 'visit'].forEach(id => spy.observe(document.getElementById(id)));
+
+        const ANNOUNCEMENTS = (DATA.announcements || []).filter(Boolean);
+        let annIdx = 0;
+        if (ANNOUNCEMENTS.length) document.getElementById('announceText').innerText = ANNOUNCEMENTS[0];
+        if (ANNOUNCEMENTS.length > 1) setInterval(() => {
+            const el = document.getElementById('announceText');
+            el.classList.add('is-out');
+            setTimeout(() => { annIdx = (annIdx + 1) % ANNOUNCEMENTS.length; el.innerText = ANNOUNCEMENTS[annIdx]; el.classList.remove('is-out'); }, 600);
+        }, 5000);
+
+        /* ==========================================================================
+           11. INTRO LOADER EXIT
+           ========================================================================== */
+        (function () {
+            const loader = document.getElementById('introLoader');
+            const fast = loader.classList.contains('fast');
+            const minTime = REDUCED_MOTION ? 300 : (fast ? 700 : 3300);
+            const start = performance.now();
+            let left = false;
+            function leave() {
+                if (left) return;
+                left = true;
+                try { sessionStorage.setItem('hf_intro_seen', '1'); } catch (e) {}
+                loader.classList.add('is-leaving');
+                setTimeout(() => { document.body.classList.add('is-loaded'); document.body.classList.remove('overflow-hidden'); }, REDUCED_MOTION ? 0 : 350);
+                setTimeout(() => loader.classList.add('is-done'), REDUCED_MOTION ? 50 : 1300);
+            }
+            loader.addEventListener('click', leave);
+            const heroImg = document.getElementById('heroImage');
+            Promise.race([
+                Promise.all([
+                    document.fonts ? document.fonts.ready : Promise.resolve(),
+                    heroImg.complete ? Promise.resolve() : new Promise(r => { heroImg.onload = r; heroImg.onerror = r; })
+                ]),
+                new Promise(r => setTimeout(r, 4500))
+            ]).then(() => setTimeout(leave, Math.max(0, minTime - (performance.now() - start))));
+        })();
+
+        /* INIT */
+        document.getElementById('yearNow').innerText = new Date().getFullYear();
+        document.getElementById('apDate').min = new Date(Date.now() - new Date().getTimezoneOffset() * 60000).toISOString().split('T')[0];
+        setActiveChip('all');
+        renderProducts();
+        updateCartUI();
+        updateWishlistDrawerUI();
+        observeReveals();
+        onScroll();
+    </script>
+</body>
+</html>
