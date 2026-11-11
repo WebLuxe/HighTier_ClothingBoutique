@@ -413,14 +413,35 @@
             const n = HS.PRODUCTS.filter(p => p.fabric === k).length;
             return `<a class="cat reveal" href="shop.html?f=${k}">${HS.pic(img, 500, 733, 'cat', true, '(max-width:820px) 45vw, 16vw', 4.4 / 3)}<span>${esc(l)}<small>${n}</small></span></a>`;
         }).join('');
-        const strip = $('#strip');
-        if (strip) strip.innerHTML = HS.PRODUCTS.filter(p => p.kind === 'saree' && HS.CUT[p.img]).slice(0, 8).map(p => card(p)).join('');
-        const strip2 = $('#strip2');
-        if (strip2) strip2.innerHTML = (() => {   // a mix: bridal, party lehengas, anarkalis and groom wear
-            const groups = ['bridal', 'lehenga', 'gown', 'groom'].map(f => HS.PRODUCTS.filter(p => p.fabric === f)), out = [];
-            for (let i = 0; out.length < 8 && groups.some(g => g[i]); i++) groups.forEach(g => g[i] && out.length < 8 && out.push(g[i]));
+        const fill = (id, list) => { const el = $('#' + id); if (el) el.innerHTML = list.map(p => card(p)).join(''); };
+        const mix = (keys, n) => {   // a few of each category in turn
+            const groups = keys.map(f => HS.PRODUCTS.filter(p => p.fabric === f)), out = [];
+            for (let i = 0; out.length < n && groups.some(g => g[i]); i++) groups.forEach(g => g[i] && out.length < n && out.push(g[i]));
             return out;
-        })().map(p => card(p)).join('');
+        };
+        const tagged = HS.PRODUCTS.filter(p => p.tag);
+        fill('trend', [...tagged, ...HS.PRODUCTS.filter(p => !p.tag)].slice(0, 10));
+        fill('strip', HS.PRODUCTS.filter(p => p.kind === 'saree' && HS.CUT[p.img]).slice(0, 10));
+        fill('strip2', mix(['bridal', 'lehenga', 'gown'], 10));
+        fill('menrow', mix(['groom', 'men'], 10));
+        const occ = $('#occ');
+        if (occ) occ.innerHTML = [
+            ['Wedding day', 'Bridal lehengas', 'bridal'], ['Reception', 'Party lehengas', 'lehenga'], ['Mehendi & haldi', 'Anarkalis', 'gown'],
+            ['Festivals & pujas', 'Silk sarees', 'saree'], ['Baraat', 'Sherwanis', 'groom'], ['Wedding guests', 'Kurtas', 'men']
+        ].map(([t, s, f], i) => {
+            const p = HS.PRODUCTS.filter(x => x.fabric === f && HS.CUT[x.img])[i % 2] || HS.PRODUCTS.find(x => x.fabric === f);
+            const img = p && HS.CUT[p.img] ? `<img class="cutimg" ${HS.cutAttrs(p.img, '(max-width:820px) 45vw, 22vw')} alt="" loading="lazy" decoding="async">` : (p ? `<img src="${HS.IMG(p.img, 500, 660)}" alt="" loading="lazy" decoding="async">` : '');
+            return `<a class="oc reveal" href="shop.html?f=${f}">${img}<span><b>${esc(t)}</b><small>${esc(s)}</small></span></a>`;
+        }).join('');
+        /* arrows on the product rows */
+        $$('.crow').forEach(w => {
+            const row = $('.strip', w), pv = $('.ca.p', w), nx = $('.ca.n', w);
+            const upd = () => { pv.disabled = row.scrollLeft < 8; nx.disabled = row.scrollLeft + row.clientWidth > row.scrollWidth - 8; };
+            const step = () => row.clientWidth * .8;
+            pv.onclick = () => row.scrollBy({ left: -step(), behavior: 'smooth' });
+            nx.onclick = () => row.scrollBy({ left: step(), behavior: 'smooth' });
+            row.addEventListener('scroll', upd, { passive: true }); upd();
+        });
         reveal();
     }
 

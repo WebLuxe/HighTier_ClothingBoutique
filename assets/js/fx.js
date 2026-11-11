@@ -90,20 +90,70 @@
         document.body.append(chip);
     }
 
-    /* ------------------------------------------------------------------ 3. opening curtain */
+    /* ------------------------------------------------------------------ 3. opening curtain + tab curtain */
+    const root = document.documentElement;
+    const veil = $('#veil');
+    const arriving = root.classList.contains('veil-in');
+    const openVeil = () => {
+        if (!veil || !root.classList.contains('veil-in')) return;
+        veil.classList.add('on');                // same closed state, now with transitions
+        root.classList.remove('veil-in');
+        requestAnimationFrame(() => requestAnimationFrame(() => veil.classList.remove('on')));
+    };
+    if (veil && arriving) $('span', veil).textContent = root.dataset.veil || '';
+
     const wait = $('#wait');
     if (wait) {
         const word = $('.wword', wait);
         if (word) word.innerHTML = [...HS.SHOP.name].map((c, i) => `<b style="--i:${i}">${c === ' ' ? '&nbsp;' : HS.esc(c)}</b>`).join('');
-        const seen = ss.get('wl_intro') || calm;
+        const seen = ss.get('wl_intro') || calm || arriving;
         ss.set('wl_intro', '1');
         wait.classList.add(seen ? 'quick' : 'full');
-        HS.introMin = calm ? 0 : seen ? 650 : 1700;   // runway.js keeps the curtain closed at least this long
+        if (!seen) for (let i = 0; i < 14; i++) {      // a few gold sparks on the curtain
+            const u = document.createElement('u');
+            const d = (2 + Math.random() * 3).toFixed(1);
+            u.style.cssText = `left:${(6 + Math.random() * 88).toFixed(1)}%;top:${(12 + Math.random() * 76).toFixed(1)}%;width:${d}px;height:${d}px;animation-delay:${(Math.random() * 2.4).toFixed(2)}s`;
+            wait.append(u);
+        }
+        HS.introMin = calm || arriving ? 0 : seen ? 650 : 2900;   // runway.js keeps the curtain closed at least this long
+        let done = false;
         HS.introDone = () => {
+            if (done) return;
+            done = true;
+            wait.classList.add('gone');
             const stage = $('#stage');
-            if (stage && !calm) { stage.classList.add('enter'); setTimeout(() => stage.classList.remove('enter'), 2400); }
+            if (stage && !calm) { stage.classList.add('enter'); setTimeout(() => stage.classList.remove('enter'), 2600); }
+            openVeil();
         };
+        wait.addEventListener('click', () => HS.introDone());   // tap to enter
+    } else if (arriving) {
+        // other pages: part the curtain once the page has painted
+        const go = () => setTimeout(openVeil, 220);
+        document.readyState === 'complete' ? go() : addEventListener('load', go);
+        setTimeout(openVeil, 1800);
     }
+
+    // main navigation closes the curtain before the next page opens
+    const VEIL_NAMES = { 'index.html': 'Runway', '': 'Runway', 'house.html': 'The House', 'lookbook.html': 'Lookbook', 'shop.html': 'Shop', 'visit.html': 'Visit us', 'bag.html': 'Your bag' };
+    if (veil && !calm) document.addEventListener('click', e => {
+        const a = e.target.closest('a[href]');
+        if (!a || e.defaultPrevented || a.target === '_blank' || e.metaKey || e.ctrlKey || e.shiftKey || e.button) return;
+        if (!a.closest('.tabs, .tabbar, .drawer, .r2, .brand, .acct')) return;
+        const url = new URL(a.href, location.href);
+        const file = url.pathname.split('/').pop();
+        if (url.origin !== location.origin || !(file in VEIL_NAMES) || (url.pathname === location.pathname && url.search === location.search)) return;
+        e.preventDefault();
+        const label = file === 'shop.html' && url.search ? a.textContent.trim().slice(0, 22) : VEIL_NAMES[file];
+        $('span', veil).textContent = label;
+        document.documentElement.classList.remove('menu-open');
+        document.body.classList.remove('menu-open');
+        root.classList.add('veiling');
+        veil.classList.add('on');
+        ss.set('wl_veil', label);
+        setTimeout(() => { location.href = url.href; }, 440);
+    });
+    // back button (page restored from memory): never leave the curtain closed
+    addEventListener('pageshow', e => { if (e.persisted && veil) { veil.classList.remove('on'); root.classList.remove('veiling', 'veil-in'); } });
 
     /* ------------------------------------------------------------------ 4. page changes */
     // The browser cross-fades between pages (fx.css @view-transition). Tapping a photo names it
@@ -139,7 +189,8 @@
     }
 
     // gold sheen across headings as they come into view
-    if ('IntersectionObserver' in window) {
+    // (computers only: the moving gradient repaints the text every frame, which phones feel while scrolling)
+    if ('IntersectionObserver' in window && matchMedia('(hover:hover) and (min-width:821px)').matches) {
         const io = new IntersectionObserver(es => es.forEach(en => {
             if (!en.isIntersecting) return;
             en.target.classList.add('sheen');

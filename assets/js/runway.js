@@ -204,7 +204,7 @@
 
     // walk the line by itself until the visitor takes over (only while the runway is on screen)
     let onScreen = true;
-    if ('IntersectionObserver' in window) new IntersectionObserver(([en]) => { onScreen = en.isIntersecting; }).observe(stage);
+    if ('IntersectionObserver' in window) new IntersectionObserver(([en]) => { onScreen = en.isIntersecting; stage.classList.toggle('off', !onScreen); }).observe(stage);   // off screen: the models are not drawn at all
     if (!calm) setInterval(() => {
         if (touched || !onScreen || document.hidden || dragging || stage.matches(':hover')) return;
         target = Math.round(target) + 1;
