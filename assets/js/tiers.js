@@ -6,10 +6,10 @@
 (() => {
     'use strict';
     const TIERS = [
-        ['LowTier_ClothingBoutique/', 'Starter', 'A simple, tidy one-page shop window: every piece with its price and a WhatsApp button.'],
-        ['MidTier_ClothingBoutique/', 'Business', 'An organised online shop: menus, offers, filters, a page for every piece, bag and smooth page changes.'],
-        ['HighTier2_ClothingBoutique/', 'Signature Royal', 'Maroon and gold: mandala opening curtain, silk-pleat transitions between tabs, gold effects, quick view and booking form.'],
-        ['HighTier_ClothingBoutique/', 'Signature Runway', 'The showpiece: runway of models, lookbook, opening curtain, photo transitions between pages and cinematic effects.']
+        ['LowTier_ClothingBoutique/', 'Starter', 'One tidy page: every piece with its price, tap to enlarge, and a WhatsApp button on each.'],
+        ['MidTier_ClothingBoutique/', 'Business', 'Everything in Starter, plus a full online shop: menus, search, filters, offers, bag, wishlist and a page for every piece.'],
+        ['HighTier2_ClothingBoutique/', 'Signature Royal', 'The Business shop in a luxury design, plus: opening curtain, silk transitions, a lookbook of complete looks, zoom gallery, share links and a fitting form.'],
+        ['HighTier_ClothingBoutique/', 'Signature Runway', 'The showpiece. The Signature features, plus: a runway of models you walk through, a lookbook page, story pages and curtains between pages.']
     ];
     const here = TIERS.map(t => t[0]).filter(p => location.pathname.includes('/' + p) || location.pathname.endsWith('/' + p.slice(0, -1))).sort((a, b) => b.length - a.length)[0];
 
