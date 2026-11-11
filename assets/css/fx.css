@@ -42,8 +42,6 @@
 .wait.gone .wc{opacity:0;transform:translate(-50%,-56%)}
 .wait.gone .wl{transform:translateX(-101%)}
 .wait.gone .wr{transform:translateX(101%)}
-.wait.quick.gone{opacity:0;transition:opacity .5s,visibility 0s .5s}
-.wait.quick.gone .wl,.wait.quick.gone .wr{transform:none}
 
 /* the runway steps forward as the curtain opens */
 .stage.enter .line{animation:push 1.8s .1s cubic-bezier(.2,.8,.2,1) both}

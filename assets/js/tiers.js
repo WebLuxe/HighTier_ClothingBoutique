@@ -1,14 +1,14 @@
 /* =============================================================================
    "Compare packages": a button in the demo label that lists the three clothing
-   demos with their prices, so a prospect can jump between them.
+   demos with what each includes, so a prospect can jump between them.
    The three demos live next to each other: ../<repo>/ (on GitHub Pages and locally).
    ============================================================================= */
 (() => {
     'use strict';
     const TIERS = [
-        ['LowTier_ClothingBoutique', 'Starter', 'Rs 15,000', 'A clean catalogue: shop, search, a page for every piece and WhatsApp orders.'],
-        ['MidTier_ClothingBoutique', 'Business', 'Rs 35,000', 'A full shop: bag, wishlist, quick view, booking form and rich sections.'],
-        ['HighTier_ClothingBoutique', 'Signature', 'Rs 52,000', 'The showpiece: runway of models, lookbook, opening curtain and cinematic effects.']
+        ['LowTier_ClothingBoutique', 'Starter', '', 'An organised online shop: menus, offers, filters, a page for every piece, bag and orders on WhatsApp.'],
+        ['MidTier_ClothingBoutique', 'Business', '', 'The maroon boutique: opening curtain, silk-pleat transitions between tabs, gold effects, quick view, bag and booking form.'],
+        ['HighTier_ClothingBoutique', 'Signature', '', 'The showpiece: runway of models, lookbook, opening curtain, photo transitions between pages and cinematic effects.']
     ];
     const here = location.pathname.split('/')[1];
 
@@ -29,7 +29,7 @@
         panel.setAttribute('aria-label', 'Website packages');
         panel.innerHTML = '<p class="wl-tiers-h">Three website packages for the same shop</p>' +
             TIERS.map(([repo, name, price, text]) => `<a href="../${repo}/"${repo === here ? ' aria-current="page"' : ''}>
-                <span><b>${name}</b><em>${price}</em></span><small>${text}</small>${repo === here ? '<i>You are here</i>' : ''}</a>`).join('') +
+                <span><b>${name}</b></span><small>${text}</small>${repo === here ? '<i>You are here</i>' : ''}</a>`).join('') +
             '<p class="wl-tiers-f">Pieces, photos and prices on these sites are examples.</p>';
         document.body.append(panel);
 

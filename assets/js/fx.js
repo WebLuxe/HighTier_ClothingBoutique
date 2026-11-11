@@ -98,7 +98,7 @@
         const seen = ss.get('wl_intro') || calm;
         ss.set('wl_intro', '1');
         wait.classList.add(seen ? 'quick' : 'full');
-        HS.introMin = seen ? 0 : 1700;   // runway.js keeps the curtain closed at least this long
+        HS.introMin = calm ? 0 : seen ? 650 : 1700;   // runway.js keeps the curtain closed at least this long
         HS.introDone = () => {
             const stage = $('#stage');
             if (stage && !calm) { stage.classList.add('enter'); setTimeout(() => stage.classList.remove('enter'), 2400); }
