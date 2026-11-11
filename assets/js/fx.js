@@ -116,7 +116,7 @@
         const box = a.closest('.pc, .card, .look-sec, li, .m') || a;
         const img = $('img.cutimg, img.ci, img', box);
         $$('[style*="view-transition-name"]').forEach(x => x.style.viewTransitionName = '');
-        if (img) img.style.viewTransitionName = 'pic';
+        if (img && matchMedia('(hover:hover) and (min-width:821px)').matches) img.style.viewTransitionName = 'pic';   // phones: a plain quick fade
     });
     addEventListener('pageshow', () => $$('img').forEach(x => { if (x.style.viewTransitionName) x.style.viewTransitionName = ''; }));
 

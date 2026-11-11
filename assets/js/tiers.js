@@ -8,10 +8,9 @@
     const TIERS = [
         ['LowTier_ClothingBoutique/', 'Starter', 'A simple, tidy one-page shop window: every piece with its price and a WhatsApp button.'],
         ['MidTier_ClothingBoutique/', 'Business', 'An organised online shop: menus, offers, filters, a page for every piece, bag and smooth page changes.'],
-        ['HighTier_ClothingBoutique/royal/', 'Signature Royal', 'Maroon and gold: mandala opening curtain, silk-pleat transitions between tabs, gold effects, quick view and booking form.'],
+        ['HighTier2_ClothingBoutique/', 'Signature Royal', 'Maroon and gold: mandala opening curtain, silk-pleat transitions between tabs, gold effects, quick view and booking form.'],
         ['HighTier_ClothingBoutique/', 'Signature Runway', 'The showpiece: runway of models, lookbook, opening curtain, photo transitions between pages and cinematic effects.']
     ];
-    // the longest matching address is the current site (royal/ sits inside HighTier_ClothingBoutique/)
     const here = TIERS.map(t => t[0]).filter(p => location.pathname.includes('/' + p) || location.pathname.endsWith('/' + p.slice(0, -1))).sort((a, b) => b.length - a.length)[0];
 
     function add(tries = 0) {
