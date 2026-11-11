@@ -121,7 +121,9 @@
 body{background:var(--grain),var(--jaal) 50% 0/76px 114px,var(--paper)}
 .hdr,.tools,.look-nav,.bar,.page,.drape,.search form,.card.alt{background:var(--grain),var(--paper)}
 .card,.rail{background:var(--grain),#f6efe7}
-.band,.foot,.summary,.visit-band{background:var(--grain),var(--jaal) 50% 0/76px 114px,var(--haze)}
+.band,.summary{background:var(--grain),var(--jaal) 50% 0/76px 114px,var(--haze)}
+.dark-band{background:var(--jaal) 50% 0/76px 114px,radial-gradient(120% 140% at 50% 0%,var(--wine-2),var(--wine))}
+.foot,.visit-band{background:radial-gradient(120% 140% at 50% 0%,var(--wine-2),var(--wine))}
 .pc .ph,.gal .big,.arch,.craft figure{background-image:var(--grain)}
 /* the runway: trellis behind the line of looks, fading out where the models stand */
 .stage:before{content:"";position:absolute;inset:0;z-index:0;pointer-events:none;background:var(--grain),var(--jaal) 50% 0/76px 114px;

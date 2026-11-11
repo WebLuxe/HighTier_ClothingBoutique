@@ -415,6 +415,12 @@
         }).join('');
         const strip = $('#strip');
         if (strip) strip.innerHTML = HS.PRODUCTS.filter(p => p.kind === 'saree' && HS.CUT[p.img]).slice(0, 8).map(p => card(p)).join('');
+        const strip2 = $('#strip2');
+        if (strip2) strip2.innerHTML = (() => {   // a mix: bridal, party lehengas, anarkalis and groom wear
+            const groups = ['bridal', 'lehenga', 'gown', 'groom'].map(f => HS.PRODUCTS.filter(p => p.fabric === f)), out = [];
+            for (let i = 0; out.length < 8 && groups.some(g => g[i]); i++) groups.forEach(g => g[i] && out.length < 8 && out.push(g[i]));
+            return out;
+        })().map(p => card(p)).join('');
         reveal();
     }
 
